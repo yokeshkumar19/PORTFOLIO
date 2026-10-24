@@ -1,0 +1,193 @@
+<div class="code-embed-8 w-embed w-script"><!-- ======================================================= -->
+<!-- HERO MARQUEE (SVG + RIGHT-TO-LEFT DRAW + NO POP-IN LOOP) -->
+<!-- Paste directly inside a Webflow Code Embed in .hero-marquee -->
+<!-- ======================================================= -->
+
+<style>
+  .hero-marquee svg {
+    overflow: visible !important;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+  }
+
+  /* Safari Baseline & Vertical Centering Alignment Fix */
+  .hero-marquee-text,
+  .hero-marquee-tp,
+  .marquee-unit,
+  .hero-marquee-text tspan {
+    dominant-baseline: central !important;
+    alignment-baseline: central !important;
+    -webkit-font-smoothing: antialiased;
+  }
+</style>
+
+<!-- 1. The Curved Ribbon & Masked TextPath SVG -->
+<svg
+  viewBox="0 0 1440 370"
+  preserveAspectRatio="xMidYMid meet"
+  style="width: 100%; height: auto; display: block; overflow: visible"
+>
+  <defs>
+    <!-- Extended Text Curve (Extends to x:5000 so incoming text is pre-rendered with ZERO pop-in) -->
+    <path
+      id="hero-marquee-curve"
+      d="M-43.0867 292.81C179.631 174.299 464.078 116.458 712.699 90.6403C934.59 67.5984 1166.5 74.6231 1436.89 105.117 L 5000 507"
+      fill="none"
+    />
+
+    <!-- SVG Mask for Right-to-Left Text Reveal -->
+    <mask id="hero-marquee-text-mask" maskUnits="userSpaceOnUse">
+      <path
+        class="hero-marquee-mask-path"
+        d="M-43.0867 292.81C179.631 174.299 464.078 116.458 712.699 90.6403C934.59 67.5984 1166.5 74.6231 1436.89 105.117"
+        stroke="#FFFFFF"
+        stroke-width="220"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"
+      />
+    </mask>
+  </defs>
+
+  <!-- 1. Background Orange Ribbon Stroke -->
+  <path
+    class="hero-marquee-bg"
+    d="M-43.0867 292.81C179.631 174.299 464.078 116.458 712.699 90.6403C934.59 67.5984 1166.5 74.6231 1436.89 105.117"
+    stroke="#FF5400"
+    stroke-width="154"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- 2. Text Group revealed via Stroke Mask -->
+  <g class="hero-marquee-text-group" mask="url(#hero-marquee-text-mask)">
+    <text
+      class="hero-marquee-text"
+      fill="#FFFFFF"
+      dominant-baseline="central"
+      alignment-baseline="central"
+      font-size="80"
+      font-weight="800"
+      font-family="inherit"
+      style="
+        letter-spacing: 0.04em;
+        user-select: none;
+        dominant-baseline: central;
+        alignment-baseline: central;
+      "
+    >
+      <textPath
+        href="#hero-marquee-curve"
+        xlink:href="#hero-marquee-curve"
+        class="hero-marquee-tp"
+        startOffset="0"
+        dominant-baseline="central"
+        alignment-baseline="central"
+      >
+        <tspan
+          class="marquee-unit"
+          dominant-baseline="central"
+          alignment-baseline="central"
+        >
+          LET’S MAKE IT MAKE SENSE &nbsp;•&nbsp; GOOD LOOKS INCLUDED &nbsp;•&nbsp;
+        </tspan>
+        <tspan dominant-baseline="central" alignment-baseline="central">
+          LET’S MAKE IT MAKE SENSE &nbsp;•&nbsp; GOOD LOOKS INCLUDED &nbsp;•&nbsp;
+        </tspan>
+        <tspan dominant-baseline="central" alignment-baseline="central">
+          LET’S MAKE IT MAKE SENSE &nbsp;•&nbsp; GOOD LOOKS INCLUDED &nbsp;•&nbsp;
+        </tspan>
+        <tspan dominant-baseline="central" alignment-baseline="central">
+          LET’S MAKE IT MAKE SENSE &nbsp;•&nbsp; GOOD LOOKS INCLUDED &nbsp;•&nbsp;
+        </tspan>
+        <tspan dominant-baseline="central" alignment-baseline="central">
+          LET’S MAKE IT MAKE SENSE &nbsp;•&nbsp; GOOD LOOKS INCLUDED &nbsp;•&nbsp;
+        </tspan>
+        <tspan dominant-baseline="central" alignment-baseline="central">
+          LET’S MAKE IT MAKE SENSE &nbsp;•&nbsp; GOOD LOOKS INCLUDED &nbsp;•&nbsp;
+        </tspan>
+        <tspan dominant-baseline="central" alignment-baseline="central">
+          LET’S MAKE IT MAKE SENSE &nbsp;•&nbsp; GOOD LOOKS INCLUDED &nbsp;•&nbsp;
+        </tspan>
+        <tspan dominant-baseline="central" alignment-baseline="central">
+          LET’S MAKE IT MAKE SENSE &nbsp;•&nbsp; GOOD LOOKS INCLUDED &nbsp;•&nbsp;
+        </tspan>
+      </textPath>
+    </text>
+  </g>
+</svg>
+
+<!-- 2. GSAP Animation Script -->
+<script>
+  (function () {
+    function initHeroMarquee() {
+      if (typeof gsap === "undefined") return;
+
+      if (typeof DrawSVGPlugin !== "undefined") {
+        gsap.registerPlugin(DrawSVGPlugin);
+      }
+      if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+      }
+
+      const bgPath = document.querySelector(".hero-marquee-bg");
+      const maskPath = document.querySelector(".hero-marquee-mask-path");
+      const textPath = document.querySelector(".hero-marquee-tp");
+      const textGroup = document.querySelector(".hero-marquee-text-group");
+      const unit = document.querySelector(".marquee-unit");
+      const container =
+        document.querySelector(".hero-marquee") ||
+        (bgPath ? bgPath.closest("svg") : null);
+
+      if (!bgPath || !maskPath || !textPath) return;
+
+      // 1. Initial State: Start at 100% 100% (hidden on right end)
+      gsap.set([bgPath, maskPath], { drawSVG: "100% 100%" });
+
+      // 2. Start Seamless Infinite Marquee Loop
+      const startInfiniteMarquee = () => {
+        const unitLength = unit ? unit.getComputedTextLength() : 1600;
+        const speedDuration = unitLength / 75; // Smooth slow reading pace
+
+        gsap.to(textPath, {
+          attr: { startOffset: -unitLength },
+          duration: speedDuration,
+          ease: "none",
+          repeat: -1,
+        });
+      };
+
+      startInfiniteMarquee();
+
+      const scrollerEl = document.querySelector(".page") || window;
+
+      // 3. ScrollTrigger: Draw Ribbon + Reveal Text simultaneously from Right to Left
+      // On reveal complete: remove mask to release Safari CPU rasterizer for silky 60fps scrolling
+      gsap.to([bgPath, maskPath], {
+        drawSVG: "0% 100%",
+        delay: window.innerWidth < 991 ? 0.3 : 0,
+        duration: 1.3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: container,
+          scroller: scrollerEl,
+          start: "top 85%",
+          once: true,
+        },
+        onComplete: () => {
+          if (textGroup) {
+            textGroup.removeAttribute("mask");
+          }
+        },
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initHeroMarquee);
+    } else {
+      initHeroMarquee();
+    }
+  })();
+</script>

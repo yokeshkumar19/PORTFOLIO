@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <rect width="1200" height="800" fill="#0B130E"/>
+
+  <rect x="50" y="40" width="1100" height="70" rx="16" fill="#121D16" stroke="#1D3325" stroke-width="1.5"/>
+  <text x="85" y="82" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="22" font-weight="700">PlantCare <tspan fill="#10B981">AI</tspan></text>
+  
+  <rect x="260" y="60" width="160" height="30" rx="15" fill="#16291E" stroke="#1D3325" stroke-width="1"/>
+  <circle cx="276" cy="75" r="4" fill="#10B981"/>
+  <text x="288" y="80" fill="#A7F3D0" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="500">Intelligent Garden OS</text>
+
+  <rect x="1000" y="58" width="120" height="34" rx="17" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1"/>
+  <text x="1060" y="80" fill="#34D399" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="600" text-anchor="middle">CONCEPT UI</text>
+
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="530" height="600" rx="20" fill="#14241B" stroke="#1D3325" stroke-width="1.5"/>
+    <text x="35" y="45" fill="#10B981" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="600" letter-spacing="1">MONITORED SPECIMEN</text>
+    <text x="35" y="85" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="32" font-weight="700">Monstera Deliciosa</text>
+    <text x="35" y="115" fill="#6EE7B7" font-family="'Neue Montreal', sans-serif" font-size="15">Swiss Cheese Plant • Living Room</text>
+
+    <g transform="translate(140, 160)">
+      <circle cx="120" cy="120" r="110" fill="#10B981" fill-opacity="0.08"/>
+      <path d="M120 30 Q 180 80 180 160 Q 180 230 120 250 Q 60 230 60 160 Q 60 80 120 30 Z" 
+            fill="none" stroke="#10B981" stroke-width="4"/>
+      <path d="M120 30 L 120 250" stroke="#34D399" stroke-width="3"/>
+      <path d="M120 90 Q 150 110 170 100" stroke="#10B981" stroke-width="3" fill="none"/>
+      <path d="M120 140 Q 160 160 175 145" stroke="#10B981" stroke-width="3" fill="none"/>
+      <path d="M120 90 Q 90 110 70 100" stroke="#10B981" stroke-width="3" fill="none"/>
+      <path d="M120 140 Q 80 160 65 145" stroke="#10B981" stroke-width="3" fill="none"/>
+    </g>
+
+    <g transform="translate(35, 450)">
+      <rect x="0" y="0" width="140" height="95" rx="14" fill="#0E1913" stroke="#1D3325" stroke-width="1.5"/>
+      <text x="20" y="30" fill="#6EE7B7" font-family="'Neue Montreal', sans-serif" font-size="12">Soil Moisture</text>
+      <text x="20" y="65" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="24" font-weight="700">68%</text>
+      <text x="20" y="85" fill="#10B981" font-family="'Neue Montreal', sans-serif" font-size="11">Optimal</text>
+
+      <rect x="160" y="0" width="140" height="95" rx="14" fill="#0E1913" stroke="#1D3325" stroke-width="1.5"/>
+      <text x="180" y="30" fill="#FBBF24" font-family="'Neue Montreal', sans-serif" font-size="12">Sunlight</text>
+      <text x="180" y="65" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="24" font-weight="700">4.2h</text>
+      <text x="180" y="85" fill="#FBBF24" font-family="'Neue Montreal', sans-serif" font-size="11">Bright Indirect</text>
+
+      <rect x="320" y="0" width="140" height="95" rx="14" fill="#0E1913" stroke="#1D3325" stroke-width="1.5"/>
+      <text x="340" y="30" fill="#34D399" font-family="'Neue Montreal', sans-serif" font-size="12">AI Health</text>
+      <text x="340" y="65" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="24" font-weight="700">96%</text>
+      <text x="340" y="85" fill="#10B981" font-family="'Neue Montreal', sans-serif" font-size="11">Excellent</text>
+    </g>
+  </g>
+
+  <g transform="translate(610, 140)">
+    <rect x="0" y="0" width="540" height="280" rx="20" fill="#14241B" stroke="#1D3325" stroke-width="1.5"/>
+    <text x="35" y="45" fill="#10B981" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="600" letter-spacing="1">AI DIAGNOSTIC RECOMMENDATION</text>
+    <text x="35" y="85" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="22" font-weight="700">Healthy Foliage Progression</text>
+    <text x="35" y="125" fill="#A7F3D0" font-family="'Neue Montreal', sans-serif" font-size="14">
+      Leaf node expansion detected on branch 3. Hydration levels are stable. Next watering cycle recommended in 48 hours with light misting.
+    </text>
+    
+    <rect x="35" y="195" width="220" height="45" rx="10" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-width="1.5"/>
+    <text x="145" y="223" fill="#34D399" font-family="'Neue Montreal', sans-serif" font-size="13" font-weight="600" text-anchor="middle">Watering: Thursday 09:00</text>
+
+    <g transform="translate(0, 310)">
+      <rect x="0" y="0" width="540" height="290" rx="20" fill="#14241B" stroke="#1D3325" stroke-width="1.5"/>
+      <text x="35" y="45" fill="#10B981" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="600" letter-spacing="1">EXPLORATORY FEATURE</text>
+      <text x="35" y="85" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="22" font-weight="700">Species Leaf Scanner (Vision Model)</text>
+      <text x="35" y="125" fill="#A7F3D0" font-family="'Neue Montreal', sans-serif" font-size="14">
+        Concept exploration for mobile camera plant identification, disease detection, and customized microclimate care regimens.
+      </text>
+
+      <g transform="translate(35, 175)">
+        <rect x="0" y="0" width="145" height="75" rx="12" fill="#0B130E" stroke="#1D3325" stroke-width="1"/>
+        <text x="18" y="32" fill="#6EE7B7" font-family="'Neue Montreal', sans-serif" font-size="11">Calathea Orbifolia</text>
+        <text x="18" y="58" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="14" font-weight="700">Water in 1d</text>
+
+        <rect x="165" y="0" width="145" height="75" rx="12" fill="#0B130E" stroke="#1D3325" stroke-width="1"/>
+        <text x="183" y="32" fill="#6EE7B7" font-family="'Neue Montreal', sans-serif" font-size="11">Ficus Lyrata</text>
+        <text x="183" y="58" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="14" font-weight="700">Misting today</text>
+
+        <rect x="330" y="0" width="145" height="75" rx="12" fill="#0B130E" stroke="#1D3325" stroke-width="1"/>
+        <text x="348" y="32" fill="#6EE7B7" font-family="'Neue Montreal', sans-serif" font-size="11">Pothos Golden</text>
+        <text x="348" y="58" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="14" font-weight="700">Thriving</text>
+      </g>
+    </g>
+  </g>
+</svg>

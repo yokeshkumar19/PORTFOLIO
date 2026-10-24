@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlantCare AI — AI-Powered Plant-Care Assistant | YK. Case Study</title>
+  <meta name="description" content="Case study for PlantCare AI: An application designed to help users understand plant-care needs and access AI-assisted guidance. The application integrates the Groq API (Qwen 3.8-27B) to provide AI-powered responses. AI testing and validation remain in progress due to API usage limits." />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+
+  <!-- Core Portfolio Design System & Case Study Stylesheets -->
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/case-study.css" />
+</head>
+<body class="case-study-page">
+
+  <!-- Two26 Custom Magnetic Cursor -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="case-nav" aria-label="Case Study Navigation">
+    <div class="case-nav-wrapper">
+      <div class="case-nav-left">
+        <a href="/" class="nav-brand-wordmark" style="text-decoration: none;">
+          YK<span class="dot">.</span>
+        </a>
+        <a href="/#projects" class="case-back-btn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 7H1M1 7L7 1M1 7L7 13"/>
+          </svg>
+          <span>Back to Portfolio</span>
+        </a>
+      </div>
+
+      <div class="case-nav-links">
+        <a href="#overview" class="case-nav-link">Overview</a>
+        <a href="#problem" class="case-nav-link">Problem</a>
+        <a href="#solution" class="case-nav-link">Solution</a>
+        <a href="#pipeline-thread" class="case-nav-link">Pipeline</a>
+        <a href="#users" class="case-nav-link">Users</a>
+        <a href="#inside-the-app" class="case-nav-link">Inside the App</a>
+        <a href="#technical" class="case-nav-link">Groq Pipeline</a>
+        <a href="#limitations" class="case-nav-link">Limitations</a>
+        <a href="#roadmap" class="case-nav-link">Roadmap</a>
+      </div>
+
+      <div class="case-nav-actions">
+        <!-- Theme Toggle -->
+        <button class="nav-theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#inside-the-app" class="btn-primary btn-view-screenshots" style="padding: 0.7em 1.4em; font-size: 0.8rem;">
+          <span>Screenshots ↘</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- =========================================================================
+         1. PROJECT HERO SECTION
+         ========================================================================= -->
+    <header class="section-case-hero" id="overview">
+      <div class="case-container">
+        <div class="case-hero-grid">
+          <!-- Text Information Column -->
+          <div class="case-hero-info">
+            <div class="case-hero-meta-row">
+              <span class="case-badge-pill status-testing">
+                <span class="beacon"></span>
+                Built · AI testing in progress
+              </span>
+              <span class="case-platform-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0001s.4482-1.0001.9993-1.0001c.551 0 .9992.4486.9992 1.0001s-.4482 1.0001-.9992 1.0001m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0001s.4482-1.0001.9993-1.0001c.5511 0 .9993.4486.9993 1.0001s-.4482 1.0001-.9993 1.0001m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.087 12 8.087c-1.8534 0-3.5902.3246-5.1368.8627L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+                </svg>
+                Android / Web
+              </span>
+              <span class="case-chip">Groq API · Qwen 3.8-27B</span>
+            </div>
+
+            <h1 class="case-hero-title">PLANTCARE AI</h1>
+            <p class="case-hero-subtitle">AI-powered plant-care assistant</p>
+            <p class="case-hero-desc">
+              PlantCare AI is an application designed to help users understand plant-care needs and access AI-assisted guidance. The application integrates the Groq API to provide AI-powered responses. AI testing and validation remain in progress due to API usage limits.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="case-cta-group">
+              <a href="#inside-the-app" class="btn-primary btn-view-screenshots">
+                <span>VIEW SCREENSHOTS ↘</span>
+              </a>
+              <a href="https://drive.google.com/file/d/1Sqq17KnPD7ZMvYl0dKIWxv4k4rCMscyQ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-try-app" aria-label="Try the App">
+                <span>TRY THE APP ↗</span>
+              </a>
+            </div>
+
+            <!-- Verified Project Metadata -->
+            <div class="case-tech-chips-wrap">
+              <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); margin-right: 0.5em;">Stack:</span>
+              <span class="case-chip">React 19</span>
+              <span class="case-chip">TypeScript</span>
+              <span class="case-chip">Groq API</span>
+              <span class="case-chip">Qwen 3.8-27B</span>
+              <span class="case-chip">FastAPI</span>
+              <span class="case-chip">Capacitor</span>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Device Frame with Authentic Home Screenshot & Glowing Vector Thread -->
+          <div class="case-hero-visual">
+            <!-- Signature Floating Glow Vector Thread -->
+            <div class="case-hero-thread-svg" aria-hidden="true">
+              <svg width="100%" height="auto" viewBox="0 0 354 487" fill="none">
+                <path id="case-hero-thread" d="M250.687 12.2982C192.69 52.7982 114.69 199.814 245.687 315.798C376.684 431.783 364.19 140.889 235.187 83.2982C153.19 46.6926 54.8365 106.798 30.1893 172.298C-59.5565 410.798 277.687 471.798 277.687 471.798" stroke="var(--orange)" stroke-width="26" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <div class="hero-phone-container">
+              <!-- Floating Live Telemetry Badges (Desktop) -->
+              <div class="floating-telemetry-badge top-badge" aria-hidden="true">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></span>
+                <span>Groq API · Vision Active</span>
+              </div>
+
+              <div class="floating-telemetry-badge bottom-badge" aria-hidden="true">
+                <span style="color: #F59E0B;">●</span>
+                <span>Model: Qwen 3.8-27B</span>
+              </div>
+
+              <!-- Device Frame with Authentic Home Dashboard Screenshot -->
+              <div class="mobile-device-frame" title="Click to view full screenshot in gallery">
+                <div class="mobile-device-screen">
+                  <img src="/assets/plantcare-ai/01-home-dashboard.jpg" alt="PlantCare AI Home Dashboard Screen on Android" />
+                  <div class="mobile-device-overlay">
+                    <div class="enlarge-icon-btn">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                      </svg>
+                    </div>
+                    <span class="enlarge-text">Click to Enlarge</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Docked Mobile Telemetry Bar -->
+              <div class="hero-mobile-telemetry-bar" aria-hidden="true">
+                <div class="mobile-telemetry-pill">
+                  <span class="live-dot-beacon"></span>
+                  <span>Groq API · Qwen 3.8-27B</span>
+                </div>
+                <div class="mobile-telemetry-pill">
+                  <span class="orange-dot-beacon">●</span>
+                  <span>Built · Testing in progress</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         2. PROBLEM SECTION
+         ========================================================================= -->
+    <section class="section-case-block" id="problem">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">01 // The Problem</span>
+          <h2 class="case-section-title">THE PROBLEM</h2>
+          <p class="case-lead-para">
+            Understanding specific plant-care requirements and investigating common plant diseases is notoriously difficult for everyday plant owners, leading to premature plant loss.
+          </p>
+        </div>
+
+        <div class="editorial-split-grid">
+          <div class="editorial-content-column">
+            <p>
+              Caring for houseplants and home gardens requires recognizing early, subtle symptoms of distress: leaf chlorosis, dark fungal spotting, moisture stress, and insect damage. For non-botanists, distinguishing between benign environmental shifts and lethal fungal pathogens like <em>Diplocarpon rosae</em> (Black Spot) or <em>Pseudocercospora</em> is nearly impossible.
+            </p>
+            <p>
+              When plant owners turn to conventional web searches, they encounter contradictory advice, dense botanical literature, or generic forums that fail to account for the specific visual state of their foliage.
+            </p>
+            <p>
+              Without immediate, structured feedback, caretakers either under-react until leaf degradation becomes irreversible, or over-react by applying improper chemical treatments that further damage the plant.
+            </p>
+            <div class="editorial-callout-box">
+              <p>
+                "Plant owners need instant visual clarity: a reliable tool to photograph a distressed leaf, identify the probable issue, and receive clear, actionable steps before it's too late."
+              </p>
+            </div>
+          </div>
+
+          <div class="editorial-stats-column">
+            <div class="stat-card">
+              <div class="stat-num">80%+</div>
+              <div class="stat-label">Premature Plant Loss</div>
+              <p class="stat-desc">Common houseplants die prematurely due to unaddressed moisture stress or misdiagnosed fungal foliage infections.</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">16+</div>
+              <div class="stat-label">Pre-Mapped Botanical Species</div>
+              <p class="stat-desc">Targeted species taxonomy in the application ruleset spanning Rose, Tomato, Monstera, Pothos, Peace Lily, and Banana.</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">&lt; 3s</div>
+              <div class="stat-label">AI Inference Turnaround</div>
+              <p class="stat-desc">Groq's accelerated LPU hardware processes image tokens and returns structured JSON diagnosis in seconds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         3. SOLUTION SECTION
+         ========================================================================= -->
+    <section class="section-case-block" id="solution">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">02 // The Proposed Solution</span>
+          <h2 class="case-section-title">THE PROPOSED SOLUTION</h2>
+          <p class="case-lead-para">
+            PlantCare AI combines mobile leaf photo capture with cloud-accelerated Groq vision inference to deliver clear condition assessments, confidence ratings, and actionable treatment guidance.
+          </p>
+        </div>
+
+        <div class="editorial-content-column" style="max-width: 800px;">
+          <p>
+            Rather than wading through generic articles, users capture or upload a leaf photo directly on their phone. The application securely sends the image through a FastAPI gateway to the Groq API running Qwen 3.8-27B, parsing the response into a structured diagnosis complete with visible symptom breakdowns and multi-step care advice.
+          </p>
+        </div>
+
+        <!-- Verified Implemented Capabilities Grid -->
+        <div class="capabilities-grid">
+          <!-- Capability 1 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                <circle cx="12" cy="13" r="4"/>
+              </svg>
+            </div>
+            <h4>Instant Photo &amp; Gallery Capture</h4>
+            <p>One-tap scanner supporting both live device camera capture and photo gallery selection via Capacitor Camera and HTML5 input fallbacks.</p>
+          </div>
+
+          <!-- Capability 2 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <h4>Groq Vision Disease Diagnosis</h4>
+            <p>High-resolution image analysis via Groq API (Qwen 3.8-27B) classifying healthy foliage or diagnosing conditions such as Black Spot, leaf rot, or pest damage.</p>
+          </div>
+
+          <!-- Capability 3 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h4>Confidence &amp; Severity Telemetry</h4>
+            <p>Calculates and renders clear diagnostic confidence percentages (e.g. 90%) and qualitative severity markers (Moderate, Mild, Severe).</p>
+          </div>
+
+          <!-- Capability 4 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h4>Sequential Treatment Recommendations</h4>
+            <p>Generates prioritized, numbered care steps: pruning infected foliage, applying appropriate fungicides, regulating airflow, and watering at soil base.</p>
+          </div>
+
+          <!-- Capability 5 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h4>Categorized Plant Care Knowledge Base</h4>
+            <p>Horticultural guides organized into Watering Frequency, Environmental Humidity, Light Requirements, and Repotting Timing.</p>
+          </div>
+
+          <!-- Capability 6 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h4>Local Scan History &amp; Plant Tracking</h4>
+            <p>Persistent storage saving past diagnostic results with species tags, dates, confidence scores, filterable Healthy vs. Diseased states, and deletion controls.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         SIGNATURE AI DIAGNOSTIC PIPELINE
+         ========================================================================= -->
+    <section class="section-case-block section-route-thread" id="pipeline-thread">
+      <div class="case-container">
+        <div class="case-section-header centered">
+          <span class="section-label">03 // AI Diagnostic Pipeline</span>
+          <h2 class="case-section-title">THE DIAGNOSTIC PIPELINE</h2>
+          <p class="case-lead-para" style="margin: 0 auto;">
+            A high-speed vision pipeline connecting mobile camera optics to accelerated Groq LPU inference in milliseconds. Scroll down to trace the diagnostic flow.
+          </p>
+        </div>
+
+        <!-- Desktop Continuous Winding Diagnostic Thread (Visible > 991px) -->
+        <div class="section-services-body desktop-only-pipeline" id="pipeline-services-body">
+          <!-- The 4 Process Layers (Interwoven with thread loops) -->
+          <div class="services-layers">
+            <!-- Stage 01: Capture -->
+            <div class="service-layer" data-step="1">
+              <div class="service-block one">
+                <span class="service-step-num">01</span>
+                <span class="service-text">Capture</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <circle cx="27" cy="27" r="23" stroke="var(--orange)" stroke-width="2" stroke-dasharray="4 3" opacity="0.8"/>
+                    <circle cx="27" cy="27" r="14" fill="var(--orange)" opacity="0.15"/>
+                    <circle cx="27" cy="27" r="6" fill="var(--orange)"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    User captures distressed foliage via Capacitor camera or image gallery, isolating symptoms of leaf damage and chlorosis.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 02: Process -->
+            <div class="service-layer" data-step="2">
+              <div class="service-block two">
+                <span class="service-step-num">02</span>
+                <span class="service-text">Process</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <rect x="8" y="8" width="38" height="38" rx="8" stroke="var(--orange)" stroke-width="2" stroke-dasharray="4 3" opacity="0.8"/>
+                    <rect x="16" y="16" width="22" height="22" rx="4" fill="var(--orange)" opacity="0.15"/>
+                    <rect x="22" y="22" width="10" height="10" rx="2" fill="var(--orange)"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    FastAPI backend validates MIME headers, downsizes images via PIL, and safely constructs base64 data payloads.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 03: Infer -->
+            <div class="service-layer" data-step="3">
+              <div class="service-block three">
+                <span class="service-step-num">03</span>
+                <span class="service-text">Infer</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <polygon points="27,6 48,42 6,42" stroke="var(--orange)" stroke-width="2" stroke-dasharray="4 3" opacity="0.8"/>
+                    <polygon points="27,16 41,40 13,40" fill="var(--orange)" opacity="0.15"/>
+                    <circle cx="27" cy="30" r="5" fill="var(--orange)"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    Groq's accelerated LPU hardware evaluates multimodal tokens using Qwen 3.8-27B vision model in sub-second inference.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 04: Diagnose -->
+            <div class="service-layer" data-step="4">
+              <div class="service-block four">
+                <span class="service-step-num">04</span>
+                <span class="service-text">Diagnose</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <circle cx="27" cy="27" r="23" stroke="var(--orange)" stroke-width="2" opacity="0.6"/>
+                    <path d="M18 27L24 33L36 21" stroke="var(--orange)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    Client renders validated JSON diagnosis: pathogen identification, confidence ratings, and multi-step care advice.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Continuous Winding Diagnostic Thread SVG Paths & Orbs -->
+          <div class="services-path" aria-hidden="true">
+            <!-- Ghost Desktop Track Path -->
+            <div class="services-path-svg">
+              <svg width="100%" height="auto" viewBox="0 0 1616 2187" fill="none">
+                <path d="M1601 15C1241.24 56.6913 1025.14 308.977 1139.71 377.393C1191.45 408.29 1240.74 339.444 1181.39 282.059C1075.45 179.627 937.582 215.243 741.458 298.287C701.638 315.147 622.383 350.59 552.298 410.201C487.298 465.486 487.725 549.018 534.765 563.77C581.804 578.523 632.714 579.634 681.058 587.392C729.731 595.202 767.011 617.17 797.836 657.756C833.766 705.065 838.864 772.034 862.127 825.767C890.491 891.283 966.341 911.2 1033.5 915.638C1130.56 922.052 1195.74 891.215 1286.16 899.069C1347.7 904.414 1457.75 932.208 1466.92 1059.42C1477.81 1210.68 1340.4 1252.99 1221.76 1286.05C1118.2 1314.91 997.775 1397.54 862.127 1334.5C757.468 1285.86 666.411 1293.34 650.401 1384.21C634.391 1475.07 710.968 1532.13 837.283 1542.81C963.598 1553.5 1146.44 1534.93 1181.39 1676C1226.53 1858.21 954.075 1839.5 797.836 1839.5C661.891 1839.5 422.283 1807.72 385.5 1700C340.427 1568 635.939 1584.37 465.5 1917C414.516 2016.5 310 2165.31 15 2165.31" stroke="var(--orange)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.16"/>
+              </svg>
+            </div>
+
+            <!-- Active Desktop Scrub Thread -->
+            <div class="services-path-svg-dark">
+              <svg width="100%" height="auto" viewBox="0 0 1616 2187" fill="none">
+                <path id="case-pipeline-thread-desktop" d="M1601 15C1241.24 56.6913 1025.14 308.977 1139.71 377.393C1191.45 408.29 1240.74 339.444 1181.39 282.059C1075.45 179.627 937.582 215.243 741.458 298.287C701.638 315.147 622.383 350.59 552.298 410.201C487.298 465.486 487.725 549.018 534.765 563.77C581.804 578.523 632.714 579.634 681.058 587.392C729.731 595.202 767.011 617.17 797.836 657.756C833.766 705.065 838.864 772.034 862.127 825.767C890.491 891.283 966.341 911.2 1033.5 915.638C1130.56 922.052 1195.74 891.215 1286.16 899.069C1347.7 904.414 1457.75 932.208 1466.92 1059.42C1477.81 1210.68 1340.4 1252.99 1221.76 1286.05C1118.2 1314.91 997.775 1397.54 862.127 1334.5C757.468 1285.86 666.411 1293.34 650.401 1384.21C634.391 1475.07 710.968 1532.13 837.283 1542.81C963.598 1553.5 1146.44 1534.93 1181.39 1676C1226.53 1858.21 954.075 1839.5 797.836 1839.5C661.891 1839.5 422.283 1807.72 385.5 1700C340.427 1568 635.939 1584.37 465.5 1917C414.516 2016.5 310 2165.31 15 2165.31" stroke="var(--orange)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Ghost Mobile Track Path -->
+            <div class="service-path-mobile">
+              <svg width="100%" height="auto" viewBox="0 0 407 1556" fill="none">
+                <path d="M542.705 10C465.727 48.981 92.8237 79.5116 92.8237 185.592C92.8237 291.673 352.712 336 346.322 440.868C339.933 545.736 104.278 543.251 92.8237 652.131C79.6013 777.82 353.287 765.564 346.322 898.5C339.358 1031.44 63.9084 911.5 68 1046C72.0916 1180.5 335.245 1170.41 328.309 1279.59C320.5 1402.5 -37.4522 1513.46 -135.704 1545.09" stroke="var(--orange)" stroke-width="18" opacity="0.16" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Active Mobile Scrub Thread -->
+            <div class="service-path-mobile-dark">
+              <svg width="100%" height="auto" viewBox="0 0 407 1556" fill="none">
+                <path id="case-pipeline-thread-mobile" d="M542.705 10C465.727 48.981 92.8237 79.5116 92.8237 185.592C92.8237 291.673 352.712 336 346.322 440.868C339.933 545.736 104.278 543.251 92.8237 652.131C79.6013 777.82 353.287 765.564 346.322 898.5C339.358 1031.44 63.9084 911.5 68 1046C72.0916 1180.5 335.245 1170.41 328.309 1279.59C320.5 1402.5 -37.4522 1513.46 -135.704 1545.09" stroke="var(--orange)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Start Bead Orb -->
+            <div class="blockhole-start" id="case-thread-start">
+              <svg width="34" height="38" viewBox="0 0 33 38" fill="none">
+                <ellipse cx="20.5" cy="34.5" rx="12.5" ry="3.5" fill="black" opacity="0.35"/>
+                <ellipse cx="12.5" cy="18" rx="12.4" ry="18" fill="var(--orange)"/>
+                <ellipse cx="12.5" cy="18" rx="9" ry="14" stroke="black" stroke-width="1.5" fill="none" opacity="0.3"/>
+              </svg>
+            </div>
+
+            <!-- End Bead Orb -->
+            <div class="blackhole-end" id="case-thread-end">
+              <svg width="34" height="38" viewBox="0 0 33 38" fill="none">
+                <ellipse cx="12.5" cy="34.5" rx="12.5" ry="3.5" fill="black" opacity="0.35"/>
+                <ellipse cx="12.5" cy="18" rx="12.4" ry="18" fill="var(--orange)"/>
+                <ellipse cx="12.5" cy="18" rx="9" ry="14" stroke="black" stroke-width="1.5" fill="none" opacity="0.3"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Dedicated Transit Pipeline (Handcrafted for screens <= 991px) -->
+        <div class="mobile-transit-pipeline mobile-only-pipeline" aria-label="AI Diagnostic Pipeline Stages">
+          <!-- Step 01: Capture -->
+          <div class="mobile-pipe-card">
+            <div class="mobile-pipe-node">
+              <span class="mobile-pipe-num">01</span>
+              <span class="mobile-pipe-line"></span>
+            </div>
+            <div class="mobile-pipe-content">
+              <div class="mobile-pipe-header">
+                <span class="mobile-pipe-tag">Stage 01</span>
+                <span class="mobile-pipe-badge">Mobile Scanner</span>
+              </div>
+              <h3 class="mobile-pipe-title">Capture</h3>
+              <p class="mobile-pipe-desc">
+                User captures distressed foliage with camera or gallery selection, isolating symptoms of leaf damage and chlorosis.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 02: Process -->
+          <div class="mobile-pipe-card">
+            <div class="mobile-pipe-node">
+              <span class="mobile-pipe-num">02</span>
+              <span class="mobile-pipe-line"></span>
+            </div>
+            <div class="mobile-pipe-content">
+              <div class="mobile-pipe-header">
+                <span class="mobile-pipe-tag">Stage 02</span>
+                <span class="mobile-pipe-badge">FastAPI Gateway</span>
+              </div>
+              <h3 class="mobile-pipe-title">Process</h3>
+              <p class="mobile-pipe-desc">
+                FastAPI validates image file formats, strips metadata, and generates an optimized base64 payload for API transport.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 03: Infer -->
+          <div class="mobile-pipe-card">
+            <div class="mobile-pipe-node">
+              <span class="mobile-pipe-num">03</span>
+              <span class="mobile-pipe-line"></span>
+            </div>
+            <div class="mobile-pipe-content">
+              <div class="mobile-pipe-header">
+                <span class="mobile-pipe-tag">Stage 03</span>
+                <span class="mobile-pipe-badge">Groq LPU Acceleration</span>
+              </div>
+              <h3 class="mobile-pipe-title">Infer</h3>
+              <p class="mobile-pipe-desc">
+                Qwen 3.8-27B vision model processes multimodal visual tokens on Groq hardware in sub-second inference.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 04: Diagnose -->
+          <div class="mobile-pipe-card">
+            <div class="mobile-pipe-node">
+              <span class="mobile-pipe-num">04</span>
+            </div>
+            <div class="mobile-pipe-content">
+              <div class="mobile-pipe-header">
+                <span class="mobile-pipe-tag">Stage 04</span>
+                <span class="mobile-pipe-badge">Structured Care</span>
+              </div>
+              <h3 class="mobile-pipe-title">Diagnose</h3>
+              <p class="mobile-pipe-desc">
+                Application renders disease condition, severity level, confidence score, and clear step-by-step horticultural treatment steps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         4. TARGET USERS SECTION
+         ========================================================================= -->
+    <section class="section-case-block" id="users">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">04 // Audience &amp; Personas</span>
+          <h2 class="case-section-title">TARGET USERS</h2>
+          <p class="case-lead-para">
+            Designed for individuals who care for living plants and need timely, non-academic guidance to diagnose problems before plant health declines.
+          </p>
+        </div>
+
+        <div class="target-users-grid">
+          <!-- User 1 -->
+          <div class="target-user-card">
+            <div class="target-user-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h4>Indoor Plant Hobbyists</h4>
+            <p>Apartment dwellers and home office workers maintaining tropical species (Monstera, Pothos, ZZ Plant, Peace Lily) who struggle with erratic watering cycles and indoor light degradation.</p>
+          </div>
+
+          <!-- User 2 -->
+          <div class="target-user-card">
+            <div class="target-user-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8v8M8 12h8"/>
+              </svg>
+            </div>
+            <h4>Balcony &amp; Backyard Gardeners</h4>
+            <p>Individuals growing ornamental flowers (Roses) or edible produce (Tomatoes, Chillies, Brinjal) who require early identification of fungal blights and pest infestations.</p>
+          </div>
+
+          <!-- User 3 -->
+          <div class="target-user-card">
+            <div class="target-user-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M16 16s-1.5-2-4-2-4 2-4 2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+              </svg>
+            </div>
+            <h4>Beginner Plant Owners</h4>
+            <p>New caretakers who want clear, reassurance-driven care recommendations without deciphering technical botanical literature or guessing what a yellowing leaf means.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         5. REAL APP SCREENSHOTS ("INSIDE THE APP")
+         ========================================================================= -->
+    <section class="section-case-block" id="inside-the-app">
+      <div class="case-container">
+        <div class="case-section-header centered">
+          <span class="section-label">05 // Interface Gallery</span>
+          <h2 class="case-section-title">INSIDE THE APP</h2>
+          <p class="case-lead-para" style="margin: 0 auto;">
+            Authentic mobile interface screens captured directly from the PlantCare AI Android application in operation. Tap any screen to inspect full-resolution details.
+          </p>
+        </div>
+
+        <!-- Screenshot Filter Pill Tabs -->
+        <div class="gallery-filter-bar" role="tablist" aria-label="Screenshots filter">
+          <button class="filter-tab-pill is-active" data-filter="all" type="button">All Screens (5)</button>
+          <button class="filter-tab-pill" data-filter="scanner" type="button">Scanner (1)</button>
+          <button class="filter-tab-pill" data-filter="diagnosis" type="button">AI Diagnosis (1)</button>
+          <button class="filter-tab-pill" data-filter="tips" type="button">Care Tips (1)</button>
+          <button class="filter-tab-pill" data-filter="history" type="button">History (1)</button>
+          <button class="filter-tab-pill" data-filter="account" type="button">Profile (1)</button>
+        </div>
+
+        <div class="screenshots-gallery-grid">
+          <!-- Screen 01: Home Dashboard -->
+          <div class="screenshot-item-card" data-index="0" data-category="scanner">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/plantcare-ai/01-home-dashboard.jpg" alt="PlantCare AI Home Dashboard Screen on Android" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">01 // Home &amp; Scanner</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Personalized Home Dashboard</h4>
+              <p class="screenshot-caption desktop-caption">Greets user with central 'Tap to scan' radar action, Scan Plant / Gallery buttons, and live counters for total scans, monitored plants, and healthy plants.</p>
+            </div>
+          </div>
+
+          <!-- Screen 02: AI Scan Result Diagnosis -->
+          <div class="screenshot-item-card" data-index="1" data-category="diagnosis">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/plantcare-ai/02-scan-result-diagnosis.jpg" alt="AI Disease Diagnosis Screen on Android" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">02 // AI Diagnosis</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">AI Disease Diagnosis Result</h4>
+              <p class="screenshot-caption desktop-caption">Groq API (Qwen 3.8-27B) diagnostic assessment of Black Spot on a Rose leaf with 90% confidence, visible symptoms breakdown, and sequential treatment actions.</p>
+            </div>
+          </div>
+
+          <!-- Screen 03: Profile & Account Hub -->
+          <div class="screenshot-item-card" data-index="2" data-category="account">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/plantcare-ai/03-profile-account.jpg" alt="PlantCare AI Profile Screen on Android" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">03 // Account Hub</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">User Profile &amp; Statistics</h4>
+              <p class="screenshot-caption desktop-caption">Profile view showing user details ('Yokesh', email), plant health breakdown (Total: 1, Diseased: 1), monitored plant count, and app version (1.0.0).</p>
+            </div>
+          </div>
+
+          <!-- Screen 04: Plant Tips Guides -->
+          <div class="screenshot-item-card" data-index="3" data-category="tips">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/plantcare-ai/04-plant-tips-guides.jpg" alt="PlantCare AI Care Tips Screen on Android" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">04 // Care Knowledge</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Categorized Plant Care Guides</h4>
+              <p class="screenshot-caption desktop-caption">Horticultural advice library with category filters for Watering, Environment, Light, and Care, providing expert guidance on humidity, indirect light, and repotting.</p>
+            </div>
+          </div>
+
+          <!-- Screen 05: Historical Scan Log -->
+          <div class="screenshot-item-card" data-index="4" data-category="history">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/plantcare-ai/05-scan-history.jpg" alt="PlantCare AI Scan History Screen on Android" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">05 // Historical Log</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Historical Scan Records</h4>
+              <p class="screenshot-caption desktop-caption">Filterable log of past diagnoses ('All', 'Healthy', 'Diseased') recording plant species, disease state, timestamp, 90% confidence level, and deletion actions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         6. TECHNICAL IMPLEMENTATION (GROQ API WORKFLOW)
+         ========================================================================= -->
+    <section class="section-case-block" id="technical">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">06 // Technical Implementation</span>
+          <h2 class="case-section-title">THE GROQ API INTEGRATION</h2>
+          <p class="case-lead-para">
+            Engineered around a secure client-server architecture where image verification, prompt structuring, and API credentials are kept strictly isolated on the backend.
+          </p>
+        </div>
+
+        <div class="editorial-content-column" style="max-width: 820px;">
+          <p>
+            To provide fast, reliable AI responses without exposing sensitive secrets, PlantCare AI splits duties between a React frontend packaged with Capacitor and a dedicated FastAPI backend microservice.
+          </p>
+        </div>
+
+        <!-- 4-Step Technical Workflow -->
+        <div class="pipeline-flow-grid">
+          <!-- Step 1 -->
+          <div class="pipeline-flow-card">
+            <span class="pipeline-step-badge">Stage 01</span>
+            <h4>Client Image Capture</h4>
+            <p>User selects a leaf image via Capacitor Camera or file picker. Converted to a multipart <code>FormData</code> binary payload and transmitted to the API endpoint.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="pipeline-flow-card">
+            <span class="pipeline-step-badge">Stage 02</span>
+            <h4>FastAPI Gateway &amp; Auth</h4>
+            <p>FastAPI validates <code>image/*</code> MIME type, checks file integrity with PIL (<code>Image.verify()</code>), and encodes to Base64. <code>GROQ_API_KEY</code> is loaded strictly from server <code>.env</code>.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="pipeline-flow-card">
+            <span class="pipeline-step-badge">Stage 03</span>
+            <h4>Groq Vision Inference</h4>
+            <p>Executes <code>chat.completions.create</code> with model ID <code>"qwen/qwen3.8-27b"</code>, structured JSON response format, temperature 0.7, and max 1000 tokens.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="pipeline-flow-card">
+            <span class="pipeline-step-badge">Stage 04</span>
+            <h4>Structured JSON Extraction</h4>
+            <p>Regex matches valid JSON blocks to strip preamble or reasoning tokens. Frontend maps species against verified rules and calculates health status.</p>
+          </div>
+        </div>
+
+        <!-- API Structured Output Schema Box -->
+        <div class="api-schema-box">
+          <pre><code><span class="code-comment">// Verified JSON Schema enforced by PlantCare AI System Prompt:</span>
+{
+  <span class="code-key">"plant"</span>: <span class="code-str">"Rose"</span>,
+  <span class="code-key">"condition"</span>: <span class="code-str">"Black Spot (Diplocarpon rosae)"</span>,
+  <span class="code-key">"confidence"</span>: <span class="code-str">"90%"</span>,
+  <span class="code-key">"symptoms"</span>: <span class="code-str">"Leaves exhibit circular purple-black spots with chlorosis..."</span>,
+  <span class="code-key">"care"</span>: <span class="code-str">"Remove and dispose of fallen leaves; apply labeled fungicide..."</span>,
+  <span class="code-key">"warning"</span>: <span class="code-str">""</span>
+}</code></pre>
+        </div>
+
+        <!-- API Rate Limits & Token Protection Details -->
+        <div class="editorial-callout-box" style="margin-top: 2em;">
+          <p>
+            <strong>Security &amp; API Key Isolation:</strong> The Groq API secret is never bundled in the frontend client, APK binary, or client-side JavaScript. All inference requests route through the FastAPI gateway, which returns clean JSON or polite HTTP 429/500 status codes when rate limits are encountered.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         7. CHALLENGES AND LIMITATIONS
+         ========================================================================= -->
+    <section class="section-case-block" id="limitations">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">07 // Technical Transparency</span>
+          <h2 class="case-section-title">CHALLENGES &amp; LIMITATIONS</h2>
+          <p class="case-lead-para">
+            An honest technical assessment separating confirmed constraints currently encountered in testing from botanical risks requiring further validation.
+          </p>
+        </div>
+
+        <div class="limitations-split-grid">
+          <!-- Column 1: Confirmed Limitations -->
+          <div class="limitation-column">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #EF4444; margin: 0 0 0.5em;">
+              Confirmed Technical Limitations
+            </h3>
+
+            <div class="limitation-card confirmed">
+              <h4>API Usage &amp; Token Limits</h4>
+              <p>Free-tier Groq API token quotas restrict high-frequency testing sessions. When token thresholds are exceeded, the API returns rate-limiting responses until quota replenishment.</p>
+            </div>
+
+            <div class="limitation-card confirmed">
+              <h4>AI Assessment, Not Lab Diagnosis</h4>
+              <p>Vision-language models evaluate visual foliage symptoms from photographs. They cannot analyze soil chemical composition, root nematodes, or microscopic bacterial cultures.</p>
+            </div>
+
+            <div class="limitation-card confirmed">
+              <h4>External Cloud Dependency</h4>
+              <p>AI disease scanning requires active network connectivity to reach the FastAPI gateway and Groq API; offline users can access cached care tips and past scans, but cannot run new inference.</p>
+            </div>
+          </div>
+
+          <!-- Column 2: Risks Under Investigation -->
+          <div class="limitation-column">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #F59E0B; margin: 0 0 0.5em;">
+              Risks Under Ongoing Investigation
+            </h3>
+
+            <div class="limitation-card investigation">
+              <h4>Overlapping Disease Symptoms</h4>
+              <p>Different pathogens (e.g. overwatering edema vs. bacterial leaf spot) can produce similar visual chlorosis. Additional validation against horticultural field datasets is ongoing.</p>
+            </div>
+
+            <div class="limitation-card investigation">
+              <h4>Variable Lighting &amp; Focus Artifacts</h4>
+              <p>Direct glare, shadows, and low camera resolution can degrade model confidence. Camera focus guidelines are being tested to improve photo input quality.</p>
+            </div>
+
+            <div class="limitation-card investigation">
+              <h4>Regional Horticultural Verification</h4>
+              <p>Chemical fungicide guidelines require verification with local agricultural authorities, as climate and localized strain resistance vary significantly across geographies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         8. DESIGN AND USER EXPERIENCE
+         ========================================================================= -->
+    <section class="section-case-block" id="design-ux">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">08 // Design &amp; UX System</span>
+          <h2 class="case-section-title">DESIGN &amp; USER EXPERIENCE</h2>
+          <p class="case-lead-para">
+            Engineered with a clean botanical aesthetic: deep forest tones, warm card surfaces, and accessible mobile micro-interactions.
+          </p>
+        </div>
+
+        <div class="editorial-split-grid">
+          <div class="editorial-content-column">
+            <p>
+              The interface was created to make plant diagnosis approachable rather than clinical. Soft forest greens (<code>#2D6A2D</code>, <code>#10B981</code>) complement clean white card surfaces and dark-mode contrast.
+            </p>
+            <p>
+              Navigation is organized into four thumb-friendly bottom tabs: <strong>Home</strong> (instant scanner and daily telemetry), <strong>History</strong> (filterable scan records), <strong>Tips</strong> (botanical advice library), and <strong>Profile</strong> (collection count and settings).
+            </p>
+            <p>
+              Modal bottom sheets slide smoothly to display scan details and care tips without navigating users away from their current view.
+            </p>
+          </div>
+
+          <div class="editorial-stats-column">
+            <div class="stat-card">
+              <div class="stat-num">4</div>
+              <div class="stat-label">Core Mobile Tabs</div>
+              <p class="stat-desc">Home, History, Tips, and Profile provide clear bottom-bar navigation with zero nested menu clutter.</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Thumb-Friendly Touch Targets</div>
+              <p class="stat-desc">Buttons, tabs, and filter pills designed with minimum 44px touch targets compliant with mobile guidelines.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         9. WHAT I LEARNED & FUTURE ROADMAP
+         ========================================================================= -->
+    <section class="section-case-block" id="roadmap">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">09 // Reflections &amp; Next Steps</span>
+          <h2 class="case-section-title">WHAT I LEARNED &amp; FUTURE ROADMAP</h2>
+          <p class="case-lead-para">
+            Key takeaways from integrating multimodal LLMs with cross-platform mobile apps, alongside a realistic engineering roadmap.
+          </p>
+        </div>
+
+        <div class="editorial-split-grid">
+          <div class="editorial-content-column">
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin-bottom: 0.8em;">What I Learned</h3>
+            <p>
+              Building PlantCare AI provided direct practical experience in deploying vision-language models into consumer mobile applications. It reinforced the criticality of server-side prompt engineering: forcing strict JSON output schemas, removing model reasoning chatter, and implementing multi-tiered fallback regex parsers to guarantee client stability.
+            </p>
+            <p>
+              It also illuminated the realities of working with cloud LLM APIs: dealing with image token quotas, latency trade-offs, and ensuring that non-AI features (like local tips and scan history) remain fully functional even when API limits are hit.
+            </p>
+          </div>
+
+          <div class="editorial-content-column">
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin-bottom: 0.8em;">Future Roadmap</h3>
+            <div style="display: flex; flex-direction: column; gap: 1em;">
+              <div class="capability-card" style="padding: 1.2em 1.4em;">
+                <h4 style="font-size: 1.05rem;">Sustainable API Quota Tier</h4>
+                <p style="font-size: 0.85rem;">Transitioning from test-tier Groq API keys to a dedicated production quota with server-side response caching for identical plant species.</p>
+              </div>
+
+              <div class="capability-card" style="padding: 1.2em 1.4em;">
+                <h4 style="font-size: 1.05rem;">Offline On-Device Fallback</h4>
+                <p style="font-size: 0.85rem;">Integrating an on-device TensorFlow Lite / ONNX model to classify common plant diseases locally when network connectivity is unavailable.</p>
+              </div>
+
+              <div class="capability-card" style="padding: 1.2em 1.4em;">
+                <h4 style="font-size: 1.05rem;">Plant Care Push Notifications</h4>
+                <p style="font-size: 0.85rem;">Connecting monitored plants to local Capacitor push notifications for customized watering and fertilizing schedules.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Action Group -->
+        <div class="case-cta-group" style="margin-top: 3.5em;">
+          <a href="https://drive.google.com/file/d/1Sqq17KnPD7ZMvYl0dKIWxv4k4rCMscyQ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-primary btn-try-app" aria-label="Try the App">
+            <span>TRY THE APP ↗</span>
+          </a>
+          <a href="/#projects" class="btn-secondary">
+            <span>EXPLORE OTHER PROJECTS ↘</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. FOOTER
+         ========================================================================= -->
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-brand">
+          YK<span class="dot">.</span>
+        </div>
+
+        <div class="footer-tagline">
+          Designed &amp; Built by YK. — Student, Designer &amp; Developer.
+        </div>
+
+        <div>
+          <a href="#overview" class="back-to-top-btn" id="back-to-top">
+            <span>BACK TO TOP</span>
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 13V1M7 1L1 7M7 1L13 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- =========================================================================
+       INTERACTIVE LIGHTBOX MODAL FOR SCREENSHOTS
+       ========================================================================= -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Screenshot Preview">
+    <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Close Lightbox">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M1 1L13 13M1 13L13 1"/>
+      </svg>
+    </button>
+
+    <button class="lightbox-nav-btn prev" id="lightbox-prev-btn" aria-label="Previous Screenshot">
+      <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M13 7H1M1 7L7 1M1 7L7 13"/>
+      </svg>
+    </button>
+
+    <button class="lightbox-nav-btn next" id="lightbox-next-btn" aria-label="Next Screenshot">
+      <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M1 7H13M13 7L7 1M13 7L7 13"/>
+      </svg>
+    </button>
+
+    <div class="lightbox-content-wrap">
+      <div class="lightbox-device-chassis">
+        <div class="mobile-device-frame">
+          <div class="mobile-device-screen">
+            <img id="lightbox-img" src="" alt="Enlarged PlantCare AI Screenshot" />
+          </div>
+        </div>
+      </div>
+
+      <div class="lightbox-caption-bar">
+        <div class="lightbox-counter" id="lightbox-counter">01 / 05</div>
+        <div class="screenshot-tag" id="lightbox-tag" style="margin-top: 0.2em;"></div>
+        <h3 class="lightbox-title" id="lightbox-title"></h3>
+        <p class="lightbox-desc" id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Pill -->
+  <div class="case-toast" id="case-toast"></div>
+
+  <!-- Case Study JavaScript Controller -->
+  <script type="module" src="/src/case-study-plantcare.js"></script>
+</body>
+</html>

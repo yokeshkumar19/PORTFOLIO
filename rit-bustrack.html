@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIT BusTrack — Real-Time College Bus Tracking | YK. Case Study</title>
+  <meta name="description" content="Case study for RIT BusTrack: An Android application designed to help college students track their buses, explore routes, and find their pickup points with a clearer, more convenient experience." />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+
+  <!-- Core Portfolio Design System & Case Study Stylesheets -->
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/case-study.css" />
+</head>
+<body class="case-study-page">
+
+  <!-- Two26 Custom Magnetic Cursor -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="case-nav" aria-label="Case Study Navigation">
+    <div class="case-nav-wrapper">
+      <div class="case-nav-left">
+        <a href="/" class="nav-brand-wordmark" style="text-decoration: none;">
+          YK<span class="dot">.</span>
+        </a>
+        <a href="/#projects" class="case-back-btn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 7H1M1 7L7 1M1 7L7 13"/>
+          </svg>
+          <span>Back to Portfolio</span>
+        </a>
+      </div>
+
+      <div class="case-nav-links">
+        <a href="#overview" class="case-nav-link">Overview</a>
+        <a href="#problem" class="case-nav-link">Problem</a>
+        <a href="#solution" class="case-nav-link">Solution</a>
+        <a href="#route-thread" class="case-nav-link">Route Pipeline</a>
+        <a href="#inside-the-app" class="case-nav-link">Inside the App</a>
+        <a href="#features" class="case-nav-link">Features</a>
+        <a href="#tech-stack" class="case-nav-link">Tech Stack</a>
+      </div>
+
+      <div class="case-nav-actions">
+        <!-- Theme Toggle -->
+        <button class="nav-theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#inside-the-app" class="btn-primary btn-view-screenshots" style="padding: 0.7em 1.4em; font-size: 0.8rem;">
+          <span>Screenshots ↘</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- =========================================================================
+         1. PROJECT HERO SECTION
+         ========================================================================= -->
+    <header class="section-case-hero" id="overview">
+      <div class="case-container">
+        <div class="case-hero-grid">
+          <!-- Text Information Column -->
+          <div class="case-hero-info">
+            <div class="case-hero-meta-row">
+              <span class="case-badge-pill">
+                <span class="beacon"></span>
+                BUILT &amp; WORKING
+              </span>
+              <span class="case-platform-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0001s.4482-1.0001.9993-1.0001c.551 0 .9992.4486.9992 1.0001s-.4482 1.0001-.9992 1.0001m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0001s.4482-1.0001.9993-1.0001c.5511 0 .9993.4486.9993 1.0001s-.4482 1.0001-.9993 1.0001m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.087 12 8.087c-1.8534 0-3.5902.3246-5.1368.8627L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+                </svg>
+                Android Platform
+              </span>
+              <span class="case-chip">Campus Transit</span>
+            </div>
+
+            <h1 class="case-hero-title">RIT BUSTRACK</h1>
+            <p class="case-hero-subtitle">Real-Time College Bus Tracking</p>
+            <p class="case-hero-desc">
+              An Android application designed to help college students track their buses, explore routes, and find their pickup points with a clearer, more convenient experience.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="case-cta-group">
+              <a href="#inside-the-app" class="btn-primary btn-view-screenshots">
+                <span>VIEW SCREENSHOTS ↘</span>
+              </a>
+              <a href="https://drive.google.com/file/d/1ktA_iCK7zsgUa-DeUGg_S3tz9vdBIFUm/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-try-app" aria-label="Try the App">
+                <span>TRY THE APP ↗</span>
+              </a>
+            </div>
+
+            <!-- Tech Stack Badges -->
+            <div class="case-tech-chips-wrap">
+              <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); margin-right: 0.5em;">Stack:</span>
+              <span class="case-chip">React</span>
+              <span class="case-chip">TypeScript</span>
+              <span class="case-chip">Firebase</span>
+              <span class="case-chip">Capacitor</span>
+              <span class="case-chip">Android</span>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Device Chassis with Actual Screenshot & Glowing Vector Thread -->
+          <div class="case-hero-visual">
+            <!-- Signature Floating Glow Vector Thread -->
+            <div class="case-hero-thread-svg" aria-hidden="true">
+              <svg width="100%" height="auto" viewBox="0 0 354 487" fill="none">
+                <path id="case-hero-thread" d="M250.687 12.2982C192.69 52.7982 114.69 199.814 245.687 315.798C376.684 431.783 364.19 140.889 235.187 83.2982C153.19 46.6926 54.8365 106.798 30.1893 172.298C-59.5565 410.798 277.687 471.798 277.687 471.798" stroke="var(--orange)" stroke-width="26" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <div class="hero-phone-container">
+              <!-- Floating Live Telemetry Badges (Desktop) -->
+              <div class="floating-telemetry-badge top-badge" aria-hidden="true">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981;"></span>
+                <span>Active Trip · R24 Live</span>
+              </div>
+
+              <div class="floating-telemetry-badge bottom-badge" aria-hidden="true">
+                <span style="color: var(--orange);">●</span>
+                <span>9 min ETA · 10 stops remaining</span>
+              </div>
+
+              <!-- Device Frame with Authentic Live Map Screenshot (No Fake Notch) -->
+              <div class="mobile-device-frame" title="Click to view full screenshot in gallery">
+                <div class="mobile-device-screen">
+                  <img src="/assets/rit-bustrack/01-live-trip-tracking.jpg" alt="RIT BusTrack Live Trip Navigation Screen on Android" />
+                  <div class="mobile-device-overlay">
+                    <div class="enlarge-icon-btn">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                      </svg>
+                    </div>
+                    <span class="enlarge-text">Click to Enlarge</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Docked Mobile Telemetry Bar (Prevents horizontal overflow on small screens) -->
+              <div class="hero-mobile-telemetry-bar" aria-hidden="true">
+                <div class="mobile-telemetry-pill">
+                  <span class="live-dot-beacon"></span>
+                  <span>Active Trip · R24 Live</span>
+                </div>
+                <div class="mobile-telemetry-pill">
+                  <span class="orange-dot-beacon">●</span>
+                  <span>9 min ETA · 10 stops</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         2. PROBLEM SECTION
+         ========================================================================= -->
+    <section class="section-case-block" id="problem">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">01 // The Problem</span>
+          <h2 class="case-section-title">THE PROBLEM</h2>
+          <p class="case-lead-para">
+            Every day, students across multiple regional districts commute to the campus relying on college-operated buses. Without transparent digital tracking, their daily journey was plagued by uncertainty.
+          </p>
+        </div>
+
+        <div class="editorial-split-grid">
+          <div class="editorial-content-column">
+            <p>
+              College students need a convenient way to access live bus locations, scheduled route breakdowns, and pickup details without depending entirely on manual updates or repeatedly contacting peers and drivers.
+            </p>
+            <p>
+              In practical everyday scenarios, buses face unexpected traffic delays, diversions, and variable departure windows. Commuters were forced to arrive at stops prematurely, resulting in prolonged waits in outdoor conditions, or risked missing their bus altogether due to lack of visibility.
+            </p>
+            <p>
+              Furthermore, drivers had to field distracting calls while operating vehicles on busy highways, creating both a logistics bottleneck and a safety hazard for college transit management.
+            </p>
+            <div class="editorial-callout-box">
+              <p>
+                "Students needed clear transit telemetry in the palm of their hands — transforming an anxious morning wait into a predictable, stress-free routine."
+              </p>
+            </div>
+          </div>
+
+          <div class="editorial-stats-column">
+            <div class="stat-card">
+              <div class="stat-num">12+</div>
+              <div class="stat-label">Daily Regional Stops</div>
+              <p class="stat-desc">Buses traverse long-distance corridors connecting Kanchipuram, Arcot, Walajapettai, and the RIT campus.</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">3</div>
+              <div class="stat-label">Scheduled Transit Shifts</div>
+              <p class="stat-desc">Daily operational rosters spanning Morning Commute (08:30 AM), Afternoon Return (01:00 PM), and Evening Trips (05:30 PM).</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Manual Reliance Removed</div>
+              <p class="stat-desc">Eliminated the need for students to make frantic calls to peers or drivers to pinpoint bus whereabouts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         3. SOLUTION SECTION
+         ========================================================================= -->
+    <section class="section-case-block" id="solution">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">02 // The Solution</span>
+          <h2 class="case-section-title">THE SOLUTION</h2>
+          <p class="case-lead-para">
+            RIT BusTrack brings bus tracking and route information into one application. Built with React, TypeScript, Firebase, and Capacitor, it connects students and drivers through real-time transit telemetry.
+          </p>
+        </div>
+
+        <div class="editorial-content-column" style="max-width: 800px;">
+          <p>
+            Rather than relying on disjointed messaging groups or physical paper schedules, RIT BusTrack establishes a direct, synchronized communication link between the driver's vehicle device and the student commuter's phone.
+          </p>
+        </div>
+
+        <!-- Implemented Capabilities Grid (Verified from Existing Code & App UI) -->
+        <div class="capabilities-grid">
+          <!-- Capability 1 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+            </div>
+            <h4>Live Bus Tracking &amp; Location Display</h4>
+            <p>Interactive map visualization tracing bus progress along regional highways, rendering real-time vehicle coordinates, active trip states, and dynamic ETA telemetry.</p>
+          </div>
+
+          <!-- Capability 2 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h4>Bus Route &amp; Stop Information</h4>
+            <p>Comprehensive stop catalogs detailing sequential pickup points (e.g. Arcot Bus Stand, Walajapettai, Kaveripakkam, Ocheri, Perumpullipakkam, Dhamal) with live progression markers.</p>
+          </div>
+
+          <!-- Capability 3 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <h4>Bus Details &amp; Operational Status</h4>
+            <p>Clear transparency into assigned fleet vehicles (Bus R15 Kanchipuram, Bus R24 Arcot), operational status (Active/Offline), driver contact details, and remaining stop counts.</p>
+          </div>
+
+          <!-- Capability 4 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h4>Student &amp; Driver Interfaces</h4>
+            <p>Role-tailored interfaces engineered for each stakeholder: an intuitive commuter feed for students, and a distraction-free trip management console for drivers.</p>
+          </div>
+
+          <!-- Capability 5 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h4>Driver Location Sharing</h4>
+            <p>One-tap trip initiation that allows verified drivers to broadcast device geolocation coordinates into Firebase Firestore throughout active route shifts.</p>
+          </div>
+
+          <!-- Capability 6 -->
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+            </div>
+            <h4>Stop Requests &amp; Notification Features</h4>
+            <p>Temporary pickup reservation features enabling students to flag their presence at designated stops, alongside automated trip status notifications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         SIGNATURE TRANSIT ROUTE PIPELINE
+         ========================================================================= -->
+    <section class="section-case-block section-route-thread" id="route-thread">
+      <div class="case-container">
+        <div class="case-section-header centered">
+          <span class="section-label">03 // Transit Pipeline</span>
+          <h2 class="case-section-title">THE TRANSIT PIPELINE</h2>
+          <p class="case-lead-para" style="margin: 0 auto;">
+            A synchronized transit pipeline keeping drivers, cloud databases, and student commuters connected every second. Scroll down to trace the live data flow.
+          </p>
+        </div>
+
+        <!-- Desktop Continuous Winding Transit Thread (Visible > 991px) -->
+        <div class="section-services-body desktop-only-pipeline" id="route-services-body">
+          <!-- The 4 Process Layers (Interwoven with thread loops) -->
+          <div class="services-layers">
+            <!-- Stage 01: Transmit -->
+            <div class="service-layer" data-step="1">
+              <div class="service-block one">
+                <span class="service-step-num">01</span>
+                <span class="service-text">Transmit</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <circle cx="27" cy="27" r="23" stroke="var(--orange)" stroke-width="2" stroke-dasharray="4 3" opacity="0.8"/>
+                    <circle cx="27" cy="27" r="14" fill="var(--orange)" opacity="0.15"/>
+                    <circle cx="27" cy="27" r="6" fill="var(--orange)"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    Driver launches the assigned shift on the Android console, broadcasting continuous background GPS geolocation updates.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 02: Synchronize -->
+            <div class="service-layer" data-step="2">
+              <div class="service-block two">
+                <span class="service-step-num">02</span>
+                <span class="service-text">Synchronize</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <rect x="8" y="8" width="38" height="38" rx="8" stroke="var(--orange)" stroke-width="2" stroke-dasharray="4 3" opacity="0.8"/>
+                    <rect x="16" y="16" width="22" height="22" rx="4" fill="var(--orange)" opacity="0.15"/>
+                    <rect x="22" y="22" width="10" height="10" rx="2" fill="var(--orange)"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    Cloud Firestore real-time listeners receive vehicle telemetry, computing approaching stop milestones and dynamic arrival ETAs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 03: Dispatch -->
+            <div class="service-layer" data-step="3">
+              <div class="service-block three">
+                <span class="service-step-num">03</span>
+                <span class="service-text">Dispatch</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <polygon points="27,6 48,42 6,42" stroke="var(--orange)" stroke-width="2" stroke-dasharray="4 3" opacity="0.8"/>
+                    <polygon points="27,16 41,40 13,40" fill="var(--orange)" opacity="0.15"/>
+                    <circle cx="27" cy="30" r="5" fill="var(--orange)"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    The live transit map draws dynamic polylines as the bus crosses regional highway checkpoints and approaching bus stops.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 04: Connect -->
+            <div class="service-layer" data-step="4">
+              <div class="service-block four">
+                <span class="service-step-num">04</span>
+                <span class="service-text">Connect</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <circle cx="27" cy="27" r="23" stroke="var(--orange)" stroke-width="2" opacity="0.6"/>
+                    <path d="M18 27L24 33L36 21" stroke="var(--orange)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    Commuters view live ETA alerts, check in at designated pickup stops, and board their bus without frantic manual calls.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Continuous Winding Transit Thread SVG Paths & Orbs -->
+          <div class="services-path" aria-hidden="true">
+            <!-- Ghost Desktop Track Path -->
+            <div class="services-path-svg">
+              <svg width="100%" height="auto" viewBox="0 0 1616 2187" fill="none">
+                <path d="M1601 15C1241.24 56.6913 1025.14 308.977 1139.71 377.393C1191.45 408.29 1240.74 339.444 1181.39 282.059C1075.45 179.627 937.582 215.243 741.458 298.287C701.638 315.147 622.383 350.59 552.298 410.201C487.298 465.486 487.725 549.018 534.765 563.77C581.804 578.523 632.714 579.634 681.058 587.392C729.731 595.202 767.011 617.17 797.836 657.756C833.766 705.065 838.864 772.034 862.127 825.767C890.491 891.283 966.341 911.2 1033.5 915.638C1130.56 922.052 1195.74 891.215 1286.16 899.069C1347.7 904.414 1457.75 932.208 1466.92 1059.42C1477.81 1210.68 1340.4 1252.99 1221.76 1286.05C1118.2 1314.91 997.775 1397.54 862.127 1334.5C757.468 1285.86 666.411 1293.34 650.401 1384.21C634.391 1475.07 710.968 1532.13 837.283 1542.81C963.598 1553.5 1146.44 1534.93 1181.39 1676C1226.53 1858.21 954.075 1839.5 797.836 1839.5C661.891 1839.5 422.283 1807.72 385.5 1700C340.427 1568 635.939 1584.37 465.5 1917C414.516 2016.5 310 2165.31 15 2165.31" stroke="var(--orange)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.16"/>
+              </svg>
+            </div>
+
+            <!-- Active Desktop Scrub Thread -->
+            <div class="services-path-svg-dark">
+              <svg width="100%" height="auto" viewBox="0 0 1616 2187" fill="none">
+                <path id="case-route-thread-desktop" d="M1601 15C1241.24 56.6913 1025.14 308.977 1139.71 377.393C1191.45 408.29 1240.74 339.444 1181.39 282.059C1075.45 179.627 937.582 215.243 741.458 298.287C701.638 315.147 622.383 350.59 552.298 410.201C487.298 465.486 487.725 549.018 534.765 563.77C581.804 578.523 632.714 579.634 681.058 587.392C729.731 595.202 767.011 617.17 797.836 657.756C833.766 705.065 838.864 772.034 862.127 825.767C890.491 891.283 966.341 911.2 1033.5 915.638C1130.56 922.052 1195.74 891.215 1286.16 899.069C1347.7 904.414 1457.75 932.208 1466.92 1059.42C1477.81 1210.68 1340.4 1252.99 1221.76 1286.05C1118.2 1314.91 997.775 1397.54 862.127 1334.5C757.468 1285.86 666.411 1293.34 650.401 1384.21C634.391 1475.07 710.968 1532.13 837.283 1542.81C963.598 1553.5 1146.44 1534.93 1181.39 1676C1226.53 1858.21 954.075 1839.5 797.836 1839.5C661.891 1839.5 422.283 1807.72 385.5 1700C340.427 1568 635.939 1584.37 465.5 1917C414.516 2016.5 310 2165.31 15 2165.31" stroke="var(--orange)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Ghost Mobile Track Path -->
+            <div class="service-path-mobile">
+              <svg width="100%" height="auto" viewBox="0 0 407 1556" fill="none">
+                <path d="M542.705 10C465.727 48.981 92.8237 79.5116 92.8237 185.592C92.8237 291.673 352.712 336 346.322 440.868C339.933 545.736 104.278 543.251 92.8237 652.131C79.6013 777.82 353.287 765.564 346.322 898.5C339.358 1031.44 63.9084 911.5 68 1046C72.0916 1180.5 335.245 1170.41 328.309 1279.59C320.5 1402.5 -37.4522 1513.46 -135.704 1545.09" stroke="var(--orange)" stroke-width="18" opacity="0.16" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Active Mobile Scrub Thread -->
+            <div class="service-path-mobile-dark">
+              <svg width="100%" height="auto" viewBox="0 0 407 1556" fill="none">
+                <path id="case-route-thread-mobile" d="M542.705 10C465.727 48.981 92.8237 79.5116 92.8237 185.592C92.8237 291.673 352.712 336 346.322 440.868C339.933 545.736 104.278 543.251 92.8237 652.131C79.6013 777.82 353.287 765.564 346.322 898.5C339.358 1031.44 63.9084 911.5 68 1046C72.0916 1180.5 335.245 1170.41 328.309 1279.59C320.5 1402.5 -37.4522 1513.46 -135.704 1545.09" stroke="var(--orange)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Start Bead Orb -->
+            <div class="blockhole-start" id="case-thread-start">
+              <svg width="34" height="38" viewBox="0 0 33 38" fill="none">
+                <ellipse cx="20.5" cy="34.5" rx="12.5" ry="3.5" fill="black" opacity="0.35"/>
+                <ellipse cx="12.5" cy="18" rx="12.4" ry="18" fill="var(--orange)"/>
+                <ellipse cx="12.5" cy="18" rx="9" ry="14" stroke="black" stroke-width="1.5" fill="none" opacity="0.3"/>
+              </svg>
+            </div>
+
+            <!-- End Bead Orb -->
+            <div class="blackhole-end" id="case-thread-end">
+              <svg width="34" height="38" viewBox="0 0 33 38" fill="none">
+                <ellipse cx="12.5" cy="34.5" rx="12.5" ry="3.5" fill="black" opacity="0.35"/>
+                <ellipse cx="12.5" cy="18" rx="12.4" ry="18" fill="var(--orange)"/>
+                <ellipse cx="12.5" cy="18" rx="9" ry="14" stroke="black" stroke-width="1.5" fill="none" opacity="0.3"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Dedicated Transit Pipeline (Handcrafted for screens <= 991px) -->
+        <div class="mobile-transit-pipeline mobile-only-pipeline" aria-label="Transit Pipeline Stages">
+          <!-- Step 01: Transmit -->
+          <div class="mobile-pipe-card">
+            <div class="mobile-pipe-node">
+              <span class="mobile-pipe-num">01</span>
+              <span class="mobile-pipe-line"></span>
+            </div>
+            <div class="mobile-pipe-content">
+              <div class="mobile-pipe-header">
+                <span class="mobile-pipe-tag">Stage 01</span>
+                <span class="mobile-pipe-badge">Driver Console</span>
+              </div>
+              <h3 class="mobile-pipe-title">Transmit</h3>
+              <p class="mobile-pipe-desc">
+                Driver launches the assigned shift on the Android console, broadcasting continuous background GPS geolocation updates to the cloud.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 02: Synchronize -->
+          <div class="mobile-pipe-card">
+            <div class="mobile-pipe-node">
+              <span class="mobile-pipe-num">02</span>
+              <span class="mobile-pipe-line"></span>
+            </div>
+            <div class="mobile-pipe-content">
+              <div class="mobile-pipe-header">
+                <span class="mobile-pipe-tag">Stage 02</span>
+                <span class="mobile-pipe-badge">Cloud Firestore</span>
+              </div>
+              <h3 class="mobile-pipe-title">Synchronize</h3>
+              <p class="mobile-pipe-desc">
+                Real-time snapshot listeners receive vehicle coordinates, computing approaching stop milestones, distance deltas, and arrival ETAs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 03: Dispatch -->
+          <div class="mobile-pipe-card">
+            <div class="mobile-pipe-node">
+              <span class="mobile-pipe-num">03</span>
+              <span class="mobile-pipe-line"></span>
+            </div>
+            <div class="mobile-pipe-content">
+              <div class="mobile-pipe-header">
+                <span class="mobile-pipe-tag">Stage 03</span>
+                <span class="mobile-pipe-badge">Dynamic Polylines</span>
+              </div>
+              <h3 class="mobile-pipe-title">Dispatch</h3>
+              <p class="mobile-pipe-desc">
+                The live transit map renders interactive route polylines as the bus crosses regional highway checkpoints and approaching bus stops.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 04: Connect -->
+          <div class="mobile-pipe-card">
+            <div class="mobile-pipe-node">
+              <span class="mobile-pipe-num">04</span>
+            </div>
+            <div class="mobile-pipe-content">
+              <div class="mobile-pipe-header">
+                <span class="mobile-pipe-tag">Stage 04</span>
+                <span class="mobile-pipe-badge">Commuter Portal</span>
+              </div>
+              <h3 class="mobile-pipe-title">Connect</h3>
+              <p class="mobile-pipe-desc">
+                Students view live ETA countdowns, check in at designated pickup stops, and board their bus on time without frantic manual phone calls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         4. REAL APP SCREENSHOTS ("INSIDE THE APP")
+         ========================================================================= -->
+    <section class="section-case-block" id="inside-the-app">
+      <div class="case-container">
+        <div class="case-section-header centered">
+          <span class="section-label">04 // Inside The App</span>
+          <h2 class="case-section-title">INSIDE THE APP</h2>
+          <p class="case-lead-para" style="margin: 0 auto;">
+            Authentic mobile interface screens captured directly from the RIT BusTrack Android application in operation. Tap any screen to inspect full-resolution details.
+          </p>
+        </div>
+
+        <!-- Screenshot Filter Pill Tabs -->
+        <div class="gallery-filter-bar" role="tablist" aria-label="Screenshots filter">
+          <button class="filter-tab-pill is-active" data-filter="all" type="button">All Screens (8)</button>
+          <button class="filter-tab-pill" data-filter="commuter" type="button">Commuter (4)</button>
+          <button class="filter-tab-pill" data-filter="driver" type="button">Driver (2)</button>
+          <button class="filter-tab-pill" data-filter="auth" type="button">Security (2)</button>
+        </div>
+
+        <div class="screenshots-gallery-grid">
+          <!-- Screen 01: Live Trip Tracking -->
+          <div class="screenshot-item-card" data-index="0" data-category="commuter">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/rit-bustrack/01-live-trip-tracking.jpg" alt="Active Trip Live Route Map on Android" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">01 // Live Navigation</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Real-Time Bus Tracking Map</h4>
+              <p class="screenshot-caption desktop-caption">Active trip monitoring view showing the highway polyline from Dhamal through Arcot, live bus indicator, ETA, and 10 remaining stops.</p>
+            </div>
+          </div>
+
+          <!-- Screen 02: Student Commuter Home Feed -->
+          <div class="screenshot-item-card" data-index="1" data-category="commuter">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/rit-bustrack/04-student-home-dashboard.jpg" alt="Student Commuter Home Screen on Android" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">02 // Commuter Feed</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Student Commuter Dashboard</h4>
+              <p class="screenshot-caption desktop-caption">Home view highlighting active transport service status, assigned campus buses (Bus R15 &amp; R24), next stops, and quick tracking actions.</p>
+            </div>
+          </div>
+
+          <!-- Screen 03: Driver Trip Dispatch -->
+          <div class="screenshot-item-card" data-index="2" data-category="driver">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/rit-bustrack/02-driver-trip-dashboard.jpg" alt="Driver Shift & Assigned Bus Dashboard" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">03 // Driver Console</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Driver Schedule &amp; Dispatch</h4>
+              <p class="screenshot-caption desktop-caption">Assigned bus overview for route R24 with today's scheduled roster (Morning, Afternoon Return, Evening) and one-tap Start Trip dispatch trigger.</p>
+            </div>
+          </div>
+
+          <!-- Screen 04: Profile & Pass Management -->
+          <div class="screenshot-item-card" data-index="3" data-category="commuter">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/rit-bustrack/03-user-profile-navigation.jpg" alt="Student Profile & Bus Pass Management View" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">04 // Account Hub</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Student Profile &amp; Pass Hub</h4>
+              <p class="screenshot-caption desktop-caption">Account view displaying verified student credentials, digital bus pass access, stop request history, notifications, and settings.</p>
+            </div>
+          </div>
+
+          <!-- Screen 05: Bus R15 Route Details -->
+          <div class="screenshot-item-card" data-index="4" data-category="commuter">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/rit-bustrack/05-bus-r15-route-details.jpg" alt="Bus R15 Kanchipuram - RIT Details View" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">05 // Route Details</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Bus R15 Corridor Overview</h4>
+              <p class="screenshot-caption desktop-caption">Kanchipuram to RIT route inspection screen detailing driver assignment, 12 stops count, GPS availability status, and pickup point reservation.</p>
+            </div>
+          </div>
+
+          <!-- Screen 06: Bus R24 Return Route Details -->
+          <div class="screenshot-item-card" data-index="5" data-category="driver">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/rit-bustrack/06-bus-r24-route-details.jpg" alt="Bus R24 Arcot - RIT Return Details View" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">06 // Return Route</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Bus R24 Return Route Details</h4>
+              <p class="screenshot-caption desktop-caption">Arcot - RIT Return journey breakdown showing ETA estimates, driver contact information, full route overview, and pickup reservation actions.</p>
+            </div>
+          </div>
+
+          <!-- Screen 07: Student Registration -->
+          <div class="screenshot-item-card" data-index="6" data-category="auth">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/rit-bustrack/07-student-registration.jpg" alt="College Email Student Account Registration" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">07 // Campus Security</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Institutional Email Registration</h4>
+              <p class="screenshot-caption desktop-caption">Student onboarding validated strictly against official college email accounts (@ritchennai.edu.in) to preserve verified campus transit security.</p>
+            </div>
+          </div>
+
+          <!-- Screen 08: Student Sign In -->
+          <div class="screenshot-item-card" data-index="7" data-category="auth">
+            <div class="mobile-device-frame">
+              <div class="mobile-device-screen">
+                <img src="/assets/rit-bustrack/08-student-signin.jpg" alt="Secure Student Sign In Screen" loading="lazy" />
+                <div class="mobile-device-overlay">
+                  <div class="enlarge-icon-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                    </svg>
+                  </div>
+                  <span class="enlarge-text">Enlarge</span>
+                </div>
+              </div>
+            </div>
+            <div class="screenshot-info">
+              <div class="screenshot-tag-row">
+                <span class="screenshot-tag">08 // Authentication</span>
+                <span class="tap-hint-pill">Expand ↗</span>
+              </div>
+              <h4 class="screenshot-title">Secure Student Authentication</h4>
+              <p class="screenshot-caption desktop-caption">Authentication portal featuring institutional email sign-in, session recovery, password reset workflows, and account state persistence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         5. KEY FEATURES SECTION
+         ========================================================================= -->
+    <section class="section-case-block" id="features">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">05 // Key Features</span>
+          <h2 class="case-section-title">KEY FEATURES</h2>
+          <p class="case-lead-para">
+            Engineered around the authentic operational dynamics of college bus transit. Every feature directly addresses a concrete daily friction point.
+          </p>
+        </div>
+
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <h4>Dual-Role Architecture</h4>
+            <p>Seamlessly handles students and authorized drivers. Drivers trigger location transmission with one touch, while students receive immediate live updates.</p>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h4>Real-Time GPS Telemetry</h4>
+            <p>Calculates dynamic distance and arrival estimates using live driver coordinates synchronized via low-latency cloud data listeners.</p>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h4>Sequential Stop Progression</h4>
+            <p>Organizes multi-stop regional lines into clear, chronological stop orders so commuters always know how many stops remain before their stop.</p>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                <line x1="4" y1="22" x2="4" y2="15"/>
+              </svg>
+            </div>
+            <h4>Pickup Point Requests</h4>
+            <p>Empowers commuters to reserve pickup points on scheduled runs, alerting bus operators to anticipated passenger loads.</p>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h4>Institutional Email Auth</h4>
+            <p>Restricted to official college email credentials (@ritchennai.edu.in), safeguarding route data and ensuring only verified campus members can access the fleet.</p>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
+            <h4>Offline Route Fallbacks</h4>
+            <p>Retains complete route lists, stop orders, and driver contacts even when vehicles are offline or in temporary network dead zones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         6. TECHNOLOGY STACK SECTION
+         ========================================================================= -->
+    <section class="section-case-block" id="tech-stack">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">06 // Tech Stack</span>
+          <h2 class="case-section-title">TECHNOLOGY STACK</h2>
+          <p class="case-lead-para">
+            Engineered with modern, reliable technologies chosen for real-time reactivity, cross-platform performance, and cloud data persistence.
+          </p>
+        </div>
+
+        <div class="tech-stack-row">
+          <div class="tech-stack-pill">
+            <span class="tech-dot"></span>
+            <span>React</span>
+          </div>
+          <div class="tech-stack-pill">
+            <span class="tech-dot"></span>
+            <span>TypeScript</span>
+          </div>
+          <div class="tech-stack-pill">
+            <span class="tech-dot"></span>
+            <span>Firebase Firestore</span>
+          </div>
+          <div class="tech-stack-pill">
+            <span class="tech-dot"></span>
+            <span>Firebase Authentication</span>
+          </div>
+          <div class="tech-stack-pill">
+            <span class="tech-dot"></span>
+            <span>Capacitor</span>
+          </div>
+          <div class="tech-stack-pill">
+            <span class="tech-dot"></span>
+            <span>Android</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- =========================================================================
+         7. CASE STUDY CONCLUSION
+         ========================================================================= -->
+    <section class="section-case-block" id="conclusion">
+      <div class="case-container">
+        <div class="case-section-header">
+          <span class="section-label">07 // Reflections &amp; Impact</span>
+          <h2 class="case-section-title">BUILT TO MAKE COLLEGE COMMUTES EASIER</h2>
+          <div class="editorial-content-column" style="max-width: 780px;">
+            <p>
+              RIT BusTrack was born out of observing everyday campus friction: students standing in uncertain weather conditions, constantly making phone calls to guess where their bus was, and drivers navigating heavy highway traffic while trying to communicate transit updates.
+            </p>
+            <p>
+              Building an Android application with real-time location telemetry and cloud synchronization offered valuable lessons in mobile engineering. It highlighted the importance of handling device geolocation lifecycle events, designing battery-conscious location streaming for drivers, handling offline edge cases gracefully, and translating complex spatial data into an approachable interface that any student can read in seconds.
+            </p>
+            <p>
+              Most importantly, the project reinforced my belief that the most impactful digital tools are those that solve concrete, unglamorous friction right in our own communities.
+            </p>
+          </div>
+
+          <!-- Bottom Action Buttons -->
+          <div class="case-cta-group" style="margin-top: 2.5em;">
+            <a href="https://drive.google.com/file/d/1ktA_iCK7zsgUa-DeUGg_S3tz9vdBIFUm/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-primary btn-try-app" aria-label="Try the App">
+              <span>TRY THE APP ↗</span>
+            </a>
+            <a href="/#projects" class="btn-secondary">
+              <span>EXPLORE OTHER PROJECTS ↘</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. FOOTER
+         ========================================================================= -->
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-brand">
+          YK<span class="dot">.</span>
+        </div>
+
+        <div class="footer-tagline">
+          Designed &amp; Built by YK. — Student, Designer &amp; Developer.
+        </div>
+
+        <div>
+          <a href="#overview" class="back-to-top-btn" id="back-to-top">
+            <span>BACK TO TOP</span>
+            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 13V1M7 1L1 7M7 1L13 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- =========================================================================
+       INTERACTIVE LIGHTBOX MODAL FOR SCREENSHOTS
+       ========================================================================= -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Screenshot Preview">
+    <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Close Lightbox">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M1 1L13 13M1 13L13 1"/>
+      </svg>
+    </button>
+
+    <button class="lightbox-nav-btn prev" id="lightbox-prev-btn" aria-label="Previous Screenshot">
+      <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M13 7H1M1 7L7 1M1 7L7 13"/>
+      </svg>
+    </button>
+
+    <button class="lightbox-nav-btn next" id="lightbox-next-btn" aria-label="Next Screenshot">
+      <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M1 7H13M13 7L7 1M13 7L7 13"/>
+      </svg>
+    </button>
+
+    <div class="lightbox-content-wrap">
+      <div class="lightbox-device-chassis">
+        <div class="mobile-device-frame">
+          <div class="mobile-device-screen">
+            <img id="lightbox-img" src="" alt="Enlarged RIT BusTrack Screenshot" />
+          </div>
+        </div>
+      </div>
+
+      <div class="lightbox-caption-bar">
+        <div class="lightbox-counter" id="lightbox-counter">01 / 08</div>
+        <div class="screenshot-tag" id="lightbox-tag" style="margin-top: 0.2em;"></div>
+        <h3 class="lightbox-title" id="lightbox-title"></h3>
+        <p class="lightbox-desc" id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Pill -->
+  <div class="case-toast" id="case-toast"></div>
+
+  <!-- Case Study JavaScript Controller -->
+  <script type="module" src="/src/case-study.js"></script>
+</body>
+</html>

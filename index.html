@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YK. — Designer &amp; Developer</title>
+  <meta name="description" content="Personal portfolio of YK. — Student, Designer &amp; Developer building digital experiences that solve real problems." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  
+  <!-- Preload Custom Fonts -->
+  <link rel="preload" href="/fonts/MDNichrome-Bold.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="/fonts/NeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin />
+  <!-- Stylesheet & Page Prefetch -->
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="prefetch" href="/about.html" />
+</head>
+<body>
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+
+  <!-- Two26 Signature Kinetic Thread Preloader -->
+  <div class="thread-loader" id="thread-loader" aria-hidden="true">
+    <div class="thread-loader-glow"></div>
+    <div class="thread-loader-canvas">
+      <svg class="thread-loader-svg" viewBox="0 0 1000 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="thread-yk-path" class="thread-yk-path"
+              d="M -100 220 C 50 220, 200 160, 340 140 L 410 220 L 480 140 L 410 220 L 410 310 C 410 335, 450 340, 490 330 C 520 325, 530 300, 530 260 L 530 140 L 530 310 L 530 225 L 605 140 L 530 225 L 610 310 C 625 320, 635 315, 645 305 A 8 8 0 1 1 645 304 C 680 290, 750 200, 850 170 C 950 140, 1050 180, 1200 100"/>
+      </svg>
+      <div class="thread-dot-beacon" id="thread-dot-beacon"></div>
+    </div>
+  </div>
+
+  <!-- Floating Navigation Bar -->
+  <header class="nav-header">
+    <div class="nav-header-left">
+      <a href="#hero" class="nav-brand-wordmark">
+        YK<span class="dot">.</span>
+      </a>
+    </div>
+
+    <div class="nav-header-right">
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop-links" aria-label="Main Navigation">
+        <a href="#projects" class="nav-link-item">Works</a>
+        <a href="/about.html" class="nav-link-item" data-about-trigger>About</a>
+        <a href="#process" class="nav-link-item">Process</a>
+        <a href="javascript:void(0)" class="nav-link-item" data-contact-trigger>Contact</a>
+      </nav>
+
+      <!-- Theme Switcher (Two26 Linen / Dark Mode) -->
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light / Dark Mode" title="Toggle Theme">
+        <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <a href="javascript:void(0)" class="cta-btn nav-cta-btn" data-contact-trigger role="button" aria-label="Open Contact Modal">
+        <span class="cta-text">Get in Touch</span>
+        <div class="cta-btn-arrow">
+          <div class="svg-arrow-cta">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="cta-btn-fill-hover"></div>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="yk-nav-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Navigation Drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Drawer Menu -->
+  <div class="ham-navbar" id="ham-menu">
+    <div class="ham-navbar-header">
+      <div class="nav-brand-wordmark">
+        YK<span class="dot">.</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.8em;">
+        <button class="theme-toggle-btn" id="ham-theme-toggle" aria-label="Toggle Light / Dark Mode" title="Toggle Theme">
+          <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="close-btn" id="ham-close-btn" aria-label="Close Menu">
+          <span>Close</span>
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 1L13 13M1 13L13 1"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="ham-navbar-content">
+      <nav class="ham-nav-links">
+        <a href="#projects" class="ham-nav-item">
+          <span class="nav-index">01</span>Works
+        </a>
+        <a href="/about.html" class="ham-nav-item" data-about-trigger>
+          <span class="nav-index">02</span>About
+        </a>
+        <a href="#process" class="ham-nav-item">
+          <span class="nav-index">03</span>Process
+        </a>
+        <a href="javascript:void(0)" class="ham-nav-item" data-contact-trigger>
+          <span class="nav-index">04</span>Contact
+        </a>
+      </nav>
+
+      <div class="ham-cta" style="margin: 1.5em 0 1em;">
+        <a href="javascript:void(0)" class="cta-btn nav-cta-btn" data-contact-trigger role="button" aria-label="Open Contact Modal">
+          <span class="cta-text">Get in Touch</span>
+          <div class="cta-btn-arrow">
+            <div class="svg-arrow-cta">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cta-btn-fill-hover"></div>
+        </a>
+      </div>
+
+      <div class="ham-navbar-sidebar">
+        <div class="ham-sidebar-block">
+          <h4>Direct Inquiries</h4>
+          <button class="email-copy-pill" data-copy-email>
+            <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span class="email-text-label">yokeshkumar192007@gmail.com</span>
+          </button>
+        </div>
+
+        <div class="ham-sidebar-block">
+          <h4>Connect</h4>
+          <div class="ham-socials">
+            <a href="https://github.com/yokeshkumar19" target="_blank" rel="noopener noreferrer" class="ham-social-link">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/yokesh-kumar-9597b0394/" target="_blank" rel="noopener noreferrer" class="ham-social-link">LinkedIn ↗</a>
+            <a href="mailto:yokeshkumar192007@gmail.com" class="ham-social-link">Email ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ham-navbar-footer">
+      <span>© 2026 YK. ALL RIGHTS RESERVED.</span>
+      <span>DESIGNER / DEVELOPER / STUDENT</span>
+    </div>
+  </div>
+
+  <!-- Interactive Project Case Study Drawer Modal -->
+  <div class="case-study-modal" id="case-study-modal">
+    <div class="modal-header">
+      <div class="nav-brand-wordmark">YK<span class="dot">.</span></div>
+      <button class="close-btn" id="modal-close-btn" aria-label="Close Case Study">
+        <span>Close</span>
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M1 1L13 13M1 13L13 1"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal-content">
+      <div>
+        <div id="modal-status-badge" style="margin-bottom: 0.8em;"></div>
+        <h1 class="modal-hero-title" id="modal-title">Project Name</h1>
+        <p style="font-size: 1.25rem; color: var(--text-dim); margin-top: 0.4em;" id="modal-category">Project Category</p>
+      </div>
+
+      <div class="modal-meta-grid">
+        <div class="modal-meta-item">
+          <h5>Role</h5>
+          <p id="modal-role">Design &amp; Development</p>
+        </div>
+        <div class="modal-meta-item">
+          <h5>Status</h5>
+          <p id="modal-status-text">Built &amp; Working</p>
+        </div>
+        <div class="modal-meta-item">
+          <h5>Timeline</h5>
+          <p id="modal-timeline">Active</p>
+        </div>
+      </div>
+
+      <div class="modal-preview-visual">
+        <img id="modal-preview-img" src="" alt="Project Visual Preview" />
+      </div>
+
+      <div class="modal-challenge-grid">
+        <div class="modal-col">
+          <h4 style="color: var(--orange);">The Challenge</h4>
+          <p id="modal-challenge"></p>
+        </div>
+        <div class="modal-col">
+          <h4 style="color: #10B981;">The Solution</h4>
+          <p id="modal-solution"></p>
+        </div>
+      </div>
+
+      <div>
+        <h4 style="font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1em;">Technologies &amp; Deliverables</h4>
+        <div class="chips-row" id="modal-tech-stack"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two26 Studio Exact Fullscreen Contact Page Experience -->
+  <div class="contact-page" id="contact-modal" data-contact-page aria-modal="true" role="dialog">
+    <!-- Background SVG Wipe Transition Layer -->
+    <div class="contact-transition" aria-hidden="true">
+      <div class="svg-tcontact">
+        <svg width="100%" height="100%" viewBox="0 0 998 901" fill="none" preserveAspectRatio="none">
+          <path id="contact-transition-path" d="M372.5 886C372.5 886 879.181 886 855 766.5C801.982 504.5 19.5 1042.52 19.5 646.5C19.5 316.5 952.535 583.56 978 318.5C1000 89.5 193.6 431.263 111 221C34.6544 26.6589 565 19 565 19" stroke="#FF5400" stroke-width="0" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Contact Top Navigation Bar -->
+    <div class="contact-navbar">
+      <div class="navbar-logo-contact">
+        <span class="contact-logo-wordmark">YK<span class="dot">.</span></span>
+      </div>
+      <div class="close-btn-wrapper">
+        <button class="close-btn contact-close-btn" id="contact-close-btn" aria-label="Close Contact View">
+          <div class="back-arrow">
+            <svg width="10" height="10" viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M6.86328 0.5L0.499281 6.864M6.86328 6.864L0.499281 0.5"/>
+            </svg>
+          </div>
+          <span class="back-btn-txt">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Contact Editorial Content -->
+    <div class="contact-content">
+      <div class="contact-left">
+        <h2 class="contact-heading">WANT TO</h2>
+        <h2 class="contact-heading">START</h2>
+        <h2 class="contact-heading right">A NEW</h2>
+        <h2 class="contact-heading left">PROJECT?</h2>
+        <p class="contact-para left">or just say hello!</p>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-email-wrap">
+          <div class="email-heading">Direct Inquiries &amp; Projects</div>
+          <a href="mailto:yokeshkumar192007@gmail.com?subject=Project%20Inquiry" class="email-link">yokeshkumar192007@gmail.com</a>
+        </div>
+
+        <div class="contact-email-wrap">
+          <div class="email-heading">Campus &amp; Collaboration</div>
+          <a href="mailto:yokeshkumar.250408@aids.ritchennai.edu.in?subject=Collaboration" class="email-link">yokeshkumar.250408@aids.ritchennai.edu.in</a>
+        </div>
+
+        <div class="contact-social-row">
+          <a href="https://github.com/yokeshkumar19" target="_blank" rel="noopener noreferrer" class="contact-social">
+            <span class="contact-social-link">GitHub ↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/yokesh-kumar-9597b0394/" target="_blank" rel="noopener noreferrer" class="contact-social">
+            <span class="contact-social-link">LinkedIn ↗</span>
+          </a>
+          <a href="mailto:yokeshkumar192007@gmail.com" class="contact-social">
+            <span class="contact-social-link">Email ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two26 Signature Contact Illustration Art -->
+    <div class="contact-img-wrap" aria-hidden="true">
+      <img src="/assets/contact-art.svg" loading="lazy" alt="Contact Illustration" class="contact-img" />
+    </div>
+  </div>
+
+  <!-- Two26 Studio Signature Orange Brush Transition Overlay (Zero Loading Screen) -->
+  <div class="about-transition-overlay" id="about-transition-overlay" aria-hidden="true">
+    <svg width="100%" height="100%" viewBox="0 0 998 901" fill="none" preserveAspectRatio="none">
+      <path id="about-transition-path" d="M372.5 886C372.5 886 879.181 886 855 766.5C801.982 504.5 19.5 1042.52 19.5 646.5C19.5 316.5 952.535 583.56 978 318.5C1000 89.5 193.6 431.263 111 221C34.6544 26.6589 565 19 565 19" stroke="#FF5400" stroke-width="0" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Toast Notification Pill -->
+  <div class="toast-notice" id="toast-notice"></div>
+
+  <!-- ==================== MAIN PAGE FLOW ==================== -->
+  <main class="page-container">
+
+    <!-- 1. Hero Section -->
+    <section class="section-hero" id="hero">
+      <div class="section-hero-wrapper">
+        <div class="hero-meta-label">
+          DESIGNER / DEVELOPER / STUDENT
+        </div>
+
+        <div class="hero-text">
+          <div class="hero-pill two">
+            <div class="hero-pill-text-mask">
+              <div class="hero-pill-text">Independent Designer &amp; Dev</div>
+            </div>
+          </div>
+
+          <div class="hero-heading-wrapper">
+            <h1 class="heading-hero">
+              <span class="hero-line-mask"><span class="hero-line">BUILDING DIGITAL</span></span>
+              <span class="hero-line-mask"><span class="hero-line">THINGS THAT MATTER.</span></span>
+            </h1>
+            <div class="heading-hero-orange" aria-hidden="true">
+              <span class="hero-line-mask"><span class="hero-line">BUILDING DIGITAL</span></span>
+              <span class="hero-line-mask"><span class="hero-line">THINGS THAT MATTER.</span></span>
+            </div>
+          </div>
+
+          <div class="hero-pill one">
+            <div class="hero-pill-text-mask">
+              <div class="hero-pill-text">Creative Engineering</div>
+            </div>
+          </div>
+
+          <div class="hero-pill three">
+            <div class="hero-pill-text-mask">
+              <div class="hero-pill-text">Built with Purpose</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="hero-supporting-text">
+          I design and build digital experiences that solve real problems — from useful student tools to AI-powered ideas.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="cta-btn">
+            <span class="cta-text">Explore My Works</span>
+            <div class="cta-btn-arrow">
+              <div class="svg-arrow-cta">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cta-btn-fill-hover"></div>
+          </a>
+          <a href="/about.html" class="cta-btn is-secondary" id="more-about-btn" data-about-trigger role="button" aria-label="Open About Me">
+            <span class="cta-text">More About Me</span>
+            <div class="cta-btn-arrow">
+              <div class="svg-arrow-cta">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cta-btn-fill-hover"></div>
+          </a>
+        </div>
+
+        <!-- Two26 Signature Decorative Hero Threads -->
+        <div class="hero-path-svg-left" aria-hidden="true">
+          <svg width="100%" height="100%" viewBox="0 0 229 599" fill="none">
+            <path id="hero-path-left" d="M33.502 584.112C104.502 557.112 147.911 474.964 143.002 393.612C139.502 335.612 106.002 281.612 59.0025 252.612C7.82072 221.032 -4.20053 385.572 52.5031 405.612C140.218 436.612 225.002 369.112 212.002 252.612C208.376 220.111 192.539 178.612 152.002 121.612C117.866 73.6124 42.0029 11.6124 42.0029 11.6124" stroke="var(--orange)" stroke-width="22" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="hero-path-svg-right" aria-hidden="true">
+          <svg width="100%" height="100%" viewBox="0 0 354 487" fill="none">
+            <path id="hero-path-right" d="M250.687 12.2982C192.69 52.7982 114.69 199.814 245.687 315.798C376.684 431.783 364.19 140.889 235.187 83.2982C153.19 46.6926 54.8365 106.798 30.1893 172.298C-59.5565 410.798 277.687 471.798 277.687 471.798" stroke="var(--orange)" stroke-width="22" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <!-- Subtle aesthetic curve -->
+        <div class="hero-line-accent">
+          <svg viewBox="0 0 1000 120" fill="none" style="width: 100%; height: auto;">
+            <path d="M0 60 C 250 110, 450 10, 700 70 C 850 100, 950 40, 1000 60" stroke="#FF5A1F" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 8"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- 2. Projects Section (ONLY 3 PROJECTS) -->
+    <section class="section-projects" id="projects">
+      <div class="section-projects-wrapper">
+        <!-- Pinned Sticky Information Panel (Desktop pinned, Mobile natural) -->
+        <aside class="projects-sticky-panel">
+          <div class="sticky-panel-header">
+            <span class="section-label">Selected Work</span>
+            <div class="section-heading-wrapper" style="margin-top: 0.5em;">
+              <h2 class="section-heading">FEATURED<br />PROJECTS</h2>
+              <div class="section-heading orange" aria-hidden="true">FEATURED<br />PROJECTS</div>
+            </div>
+            <p class="projects-panel-desc">
+              Real projects solving authentic problems — from live campus tools to exploratory AI concepts.
+            </p>
+          </div>
+
+          <!-- Interactive Scroll Progress Tracker -->
+          <div class="projects-nav-tracker" aria-label="Project Quick Navigation">
+            <button class="tracker-item is-active" data-project-target="rit-bustrack" type="button">
+              <span class="tracker-num">01</span>
+              <div class="tracker-info">
+                <span class="tracker-title">RIT BusTrack</span>
+                <span class="tracker-badge live">Built &amp; Working</span>
+              </div>
+              <div class="tracker-indicator-line"></div>
+            </button>
+
+            <button class="tracker-item" data-project-target="plantcare-ai" type="button">
+              <span class="tracker-num">02</span>
+              <div class="tracker-info">
+                <span class="tracker-title">PlantCare AI</span>
+                <span class="tracker-badge testing">Built · Testing</span>
+              </div>
+              <div class="tracker-indicator-line"></div>
+            </button>
+
+            <button class="tracker-item" data-project-target="notes-to-quiz-ai" type="button">
+              <span class="tracker-num">03</span>
+              <div class="tracker-info">
+                <span class="tracker-title">Notes-to-Quiz AI</span>
+                <span class="tracker-badge progress">In Progress</span>
+              </div>
+              <div class="tracker-indicator-line"></div>
+            </button>
+          </div>
+
+          <!-- Hint Pill -->
+          <div class="projects-scroll-hint">
+            <span class="hint-dot"></span>
+            <span>SCROLL TO EXPLORE WORKS</span>
+          </div>
+        </aside>
+
+        <div class="projects-editorial-list">
+          
+          <!-- PROJECT 01: RIT BusTrack -->
+          <article class="project-card" data-project-id="rit-bustrack">
+            <div class="project-card-visual">
+              <img src="/assets/rit_bustrack.svg" alt="RIT BusTrack Live Transit Interface" loading="lazy" />
+            </div>
+            <div class="project-card-content">
+              <div class="project-header-meta">
+                <span class="project-number">01</span>
+                <span class="status-pill live">
+                  <span class="beacon"></span>
+                  BUILT &amp; WORKING
+                </span>
+              </div>
+              <span class="project-category">PRODUCT DESIGN / DEVELOPMENT</span>
+              <h3 class="project-title">RIT BusTrack</h3>
+              <p class="project-desc">
+                A college bus-tracking application designed to help students follow bus routes and access live journey information.
+              </p>
+              <div class="project-tags-row">
+                <span class="project-tag">Android App</span>
+                <span class="project-tag">React &amp; TS</span>
+                <span class="project-tag">Firebase</span>
+                <span class="project-tag">Capacitor</span>
+              </div>
+              <div class="project-action-row" style="display: flex; gap: 0.75em; flex-wrap: wrap;">
+                <a href="/rit-bustrack.html" class="btn-secondary" style="padding: 0.6em 1.2em; font-size: 0.8rem; text-decoration: none;">
+                  VIEW CASE STUDY ↘
+                </a>
+                <a href="https://drive.google.com/file/d/1ktA_iCK7zsgUa-DeUGg_S3tz9vdBIFUm/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 0.6em 1.2em; font-size: 0.8rem; text-decoration: none; color: var(--orange); border-color: rgba(255, 84, 0, 0.4);">
+                  TRY APP ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: PlantCare AI -->
+          <article class="project-card" data-project-id="plantcare-ai">
+            <div class="project-card-visual">
+              <img src="/assets/plantcare_ai.svg" alt="PlantCare AI Botanical Dashboard" loading="lazy" />
+            </div>
+            <div class="project-card-content">
+              <div class="project-header-meta">
+                <span class="project-number">02</span>
+                <span class="status-pill testing">
+                  <span class="beacon"></span>
+                  BUILT · AI TESTING IN PROGRESS
+                </span>
+              </div>
+              <span class="project-category">AI PRODUCT / MOBILE APP</span>
+              <h3 class="project-title">PlantCare AI</h3>
+              <p class="project-desc">
+                An application designed to help users understand plant-care needs and access AI-assisted guidance. Powered by Groq API (Qwen 3.8-27B).
+              </p>
+              <div class="project-tags-row">
+                <span class="project-tag">Groq API (Qwen)</span>
+                <span class="project-tag">React 19 &amp; TS</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Capacitor Android</span>
+              </div>
+              <div class="project-action-row" style="display: flex; gap: 0.75em; flex-wrap: wrap;">
+                <a href="/plantcare-ai.html" class="btn-secondary" style="padding: 0.6em 1.2em; font-size: 0.8rem; text-decoration: none;">
+                  VIEW CASE STUDY ↘
+                </a>
+                <a href="https://drive.google.com/file/d/1Sqq17KnPD7ZMvYl0dKIWxv4k4rCMscyQ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 0.6em 1.2em; font-size: 0.8rem; text-decoration: none; color: var(--orange); border-color: rgba(255, 84, 0, 0.4);">
+                  TRY APK ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: Notes-to-Quiz AI -->
+          <article class="project-card" data-project-id="notes-to-quiz-ai">
+            <div class="project-card-visual">
+              <img src="/assets/notes_to_quiz.svg" alt="Notes-to-Quiz AI Educational Interface" loading="lazy" />
+            </div>
+            <div class="project-card-content">
+              <div class="project-header-meta">
+                <span class="project-number">03</span>
+                <span class="status-pill progress">
+                  <span class="beacon"></span>
+                  IN PROGRESS
+                </span>
+              </div>
+              <span class="project-category">AI PRODUCT / EDUCATION</span>
+              <h3 class="project-title">Notes-to-Quiz AI</h3>
+              <p class="project-desc">
+                An AI-powered study tool exploring how notes and syllabus topics can become important questions and practice quizzes.
+              </p>
+              <div class="project-tags-row">
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">LLM Integration</span>
+                <span class="project-tag">Syllabus Parser</span>
+                <span class="project-tag">Education</span>
+              </div>
+              <div class="project-action-row">
+                <span class="btn-secondary" style="padding: 0.6em 1.2em; font-size: 0.8rem;">
+                  VIEW DETAILS ↘
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- 3. About Section Summary -->
+    <section class="section-about" id="about-summary">
+      <div class="section-about-wrapper">
+        <div class="about-meta">
+          <span class="section-label">About Me</span>
+          <div class="about-pills-wrap">
+            <span class="about-pill">Yokeshkumar N</span>
+            <span class="about-pill">RIT Chennai</span>
+            <span class="about-pill">UI/UX &amp; Software Dev</span>
+            <span class="about-pill">AI Integration</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <h2 class="about-para">
+            CURIOUS BY NATURE. <span class="highlight">BUILDER BY CHOICE.</span>
+          </h2>
+          <p class="about-sub-para">
+            I'm <strong>Yokeshkumar N</strong>, an undergraduate engineering student at <strong>Rajalakshmi Institute of Technology</strong> passionate about software development, UI/UX design, and practical AI applications.
+          </p>
+          <p class="about-sub-para">
+            Career Objective: <em>"To develop innovative and user-friendly software solutions, enhance my technical skills, and build technology that solves real-world problems."</em>
+          </p>
+          <div style="margin-top: 1.5em;">
+            <a href="javascript:void(0)" class="cta-btn" data-contact-trigger role="button" aria-label="Open Contact Modal">
+              <span class="cta-text">Let's Connect</span>
+              <div class="cta-btn-arrow">
+                <div class="svg-arrow-cta">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="cta-btn-fill-hover"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider-line" aria-hidden="true"></div>
+
+    <!-- 4. Process Section -->
+    <section class="section-process" id="process">
+      <div class="section-process-wrapper">
+        <div class="section-header-row">
+          <div>
+            <span class="section-label">How I Work</span>
+            <div class="section-heading-wrapper" style="margin-top: 0.4em;">
+              <h2 class="section-heading">MY PROCESS</h2>
+              <div class="section-heading orange" aria-hidden="true">MY PROCESS</div>
+            </div>
+          </div>
+          <p style="color: var(--text-dim); max-width: 320px; font-size: 0.95rem;">
+            A simple, disciplined methodology for turning ambiguous ideas into tangible, tested products.
+          </p>
+        </div>
+
+        <!-- Two26 Signature Thread-Like Scrolling Architecture -->
+        <div class="section-services-body" id="services-body">
+          <!-- The 4 Process Layers (Interwoven with thread loops) -->
+          <div class="services-layers">
+            <!-- Step 01: Discover -->
+            <div class="service-layer" data-step="1">
+              <div class="service-block one">
+                <span class="service-step-num">01</span>
+                <span class="service-text">Discover</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <circle cx="27" cy="27" r="23" stroke="var(--orange)" stroke-width="2" stroke-dasharray="4 3" opacity="0.8"/>
+                    <circle cx="27" cy="27" r="14" fill="var(--orange)" opacity="0.15"/>
+                    <circle cx="27" cy="27" r="6" fill="var(--orange)"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    Observing real user friction, interviewing peers, and uncovering authentic problems before writing any code.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 02: Design -->
+            <div class="service-layer" data-step="2">
+              <div class="service-block two">
+                <span class="service-step-num">02</span>
+                <span class="service-text">Design</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <rect x="8" y="8" width="38" height="38" rx="8" stroke="var(--orange)" stroke-width="2" stroke-dasharray="4 3" opacity="0.8"/>
+                    <rect x="16" y="16" width="22" height="22" rx="4" fill="var(--orange)" opacity="0.15"/>
+                    <rect x="22" y="22" width="10" height="10" rx="2" fill="var(--orange)"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    Mapping user journeys, building clear typography hierarchies, and prototyping intuitive interface systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 03: Build -->
+            <div class="service-layer" data-step="3">
+              <div class="service-block three">
+                <span class="service-step-num">03</span>
+                <span class="service-text">Build</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <polygon points="27,6 48,42 6,42" stroke="var(--orange)" stroke-width="2" stroke-dasharray="4 3" opacity="0.8"/>
+                    <polygon points="27,16 41,40 13,40" fill="var(--orange)" opacity="0.15"/>
+                    <circle cx="27" cy="30" r="5" fill="var(--orange)"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    Translating design into clean, responsive frontend code with modern stacks, smooth motion, and robust APIs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 04: Refine -->
+            <div class="service-layer" data-step="4">
+              <div class="service-block four">
+                <span class="service-step-num">04</span>
+                <span class="service-text">Refine</span>
+                <div class="service-svg">
+                  <svg class="service-icon-svg" viewBox="0 0 54 54" fill="none">
+                    <circle cx="27" cy="27" r="23" stroke="var(--orange)" stroke-width="2" opacity="0.6"/>
+                    <path d="M18 27L24 33L36 21" stroke="var(--orange)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="service-block-para-wrapper">
+                  <p class="service-block-para">
+                    Testing with real users, eliminating edge cases, polishing micro-interactions, and optimizing across mobile.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Two26 Continuous Thread SVG Paths & Orbs -->
+          <div class="services-path" aria-hidden="true">
+            <!-- Ghost Desktop Track Path (faint preview line) -->
+            <div class="services-path-svg">
+              <svg width="100%" height="auto" viewBox="0 0 1616 2187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1601 15C1241.24 56.6913 1025.14 308.977 1139.71 377.393C1191.45 408.29 1240.74 339.444 1181.39 282.059C1075.45 179.627 937.582 215.243 741.458 298.287C701.638 315.147 622.383 350.59 552.298 410.201C487.298 465.486 487.725 549.018 534.765 563.77C581.804 578.523 632.714 579.634 681.058 587.392C729.731 595.202 767.011 617.17 797.836 657.756C833.766 705.065 838.864 772.034 862.127 825.767C890.491 891.283 966.341 911.2 1033.5 915.638C1130.56 922.052 1195.74 891.215 1286.16 899.069C1347.7 904.414 1457.75 932.208 1466.92 1059.42C1477.81 1210.68 1340.4 1252.99 1221.76 1286.05C1118.2 1314.91 997.775 1397.54 862.127 1334.5C757.468 1285.86 666.411 1293.34 650.401 1384.21C634.391 1475.07 710.968 1532.13 837.283 1542.81C963.598 1553.5 1146.44 1534.93 1181.39 1676C1226.53 1858.21 954.075 1839.5 797.836 1839.5C661.891 1839.5 422.283 1807.72 385.5 1700C340.427 1568 635.939 1584.37 465.5 1917C414.516 2016.5 310 2165.31 15 2165.31" stroke="var(--orange)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.16"/>
+              </svg>
+            </div>
+
+            <!-- Active Desktop Scrub Thread (draws dynamically on scroll) -->
+            <div class="services-path-svg-dark">
+              <svg width="100%" height="auto" viewBox="0 0 1616 2187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="process-thread-desktop" d="M1601 15C1241.24 56.6913 1025.14 308.977 1139.71 377.393C1191.45 408.29 1240.74 339.444 1181.39 282.059C1075.45 179.627 937.582 215.243 741.458 298.287C701.638 315.147 622.383 350.59 552.298 410.201C487.298 465.486 487.725 549.018 534.765 563.77C581.804 578.523 632.714 579.634 681.058 587.392C729.731 595.202 767.011 617.17 797.836 657.756C833.766 705.065 838.864 772.034 862.127 825.767C890.491 891.283 966.341 911.2 1033.5 915.638C1130.56 922.052 1195.74 891.215 1286.16 899.069C1347.7 904.414 1457.75 932.208 1466.92 1059.42C1477.81 1210.68 1340.4 1252.99 1221.76 1286.05C1118.2 1314.91 997.775 1397.54 862.127 1334.5C757.468 1285.86 666.411 1293.34 650.401 1384.21C634.391 1475.07 710.968 1532.13 837.283 1542.81C963.598 1553.5 1146.44 1534.93 1181.39 1676C1226.53 1858.21 954.075 1839.5 797.836 1839.5C661.891 1839.5 422.283 1807.72 385.5 1700C340.427 1568 635.939 1584.37 465.5 1917C414.516 2016.5 310 2165.31 15 2165.31" stroke="var(--orange)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Ghost Mobile Track Path -->
+            <div class="service-path-mobile">
+              <svg width="100%" height="auto" viewBox="0 0 407 1556" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M542.705 10C465.727 48.981 92.8237 79.5116 92.8237 185.592C92.8237 291.673 352.712 336 346.322 440.868C339.933 545.736 104.278 543.251 92.8237 652.131C79.6013 777.82 353.287 765.564 346.322 898.5C339.358 1031.44 63.9084 911.5 68 1046C72.0916 1180.5 335.245 1170.41 328.309 1279.59C320.5 1402.5 -37.4522 1513.46 -135.704 1545.09" stroke="var(--orange)" stroke-width="18" opacity="0.16" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Active Mobile Scrub Thread -->
+            <div class="service-path-mobile-dark">
+              <svg width="100%" height="auto" viewBox="0 0 407 1556" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="process-thread-mobile" d="M542.705 10C465.727 48.981 92.8237 79.5116 92.8237 185.592C92.8237 291.673 352.712 336 346.322 440.868C339.933 545.736 104.278 543.251 92.8237 652.131C79.6013 777.82 353.287 765.564 346.322 898.5C339.358 1031.44 63.9084 911.5 68 1046C72.0916 1180.5 335.245 1170.41 328.309 1279.59C320.5 1402.5 -37.4522 1513.46 -135.704 1545.09" stroke="var(--orange)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- Start Orb Bead -->
+            <div class="blockhole-start" id="process-thread-start">
+              <svg width="34" height="38" viewBox="0 0 33 38" fill="none">
+                <ellipse cx="20.5" cy="34.5" rx="12.5" ry="3.5" fill="black" opacity="0.35"/>
+                <ellipse cx="12.5" cy="18" rx="12.4" ry="18" fill="var(--orange)"/>
+                <ellipse cx="12.5" cy="18" rx="9" ry="14" stroke="black" stroke-width="1.5" fill="none" opacity="0.3"/>
+              </svg>
+            </div>
+
+            <!-- End Orb Bead -->
+            <div class="blackhole-end" id="process-thread-end">
+              <svg width="34" height="38" viewBox="0 0 33 38" fill="none">
+                <ellipse cx="12.5" cy="34.5" rx="12.5" ry="3.5" fill="black" opacity="0.35"/>
+                <ellipse cx="12.5" cy="18" rx="12.4" ry="18" fill="var(--orange)"/>
+                <ellipse cx="12.5" cy="18" rx="9" ry="14" stroke="black" stroke-width="1.5" fill="none" opacity="0.3"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Footer with Two26 Studio Signature Top Banner -->
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-top" style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 2.5em; border-bottom: 1px solid var(--border-subtle); margin-bottom: 2.5em; flex-wrap: wrap; gap: 1.5em;">
+          <div class="footer-top-left">
+            <h2 class="footer-heading" style="font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 700; color: var(--text-main); margin: 0; letter-spacing: -0.03em;">Okay, that's enough website.</h2>
+          </div>
+          <div class="footer-top-right">
+            <a href="javascript:void(0)" class="cta-btn" data-contact-trigger role="button" aria-label="Open Contact Modal">
+              <span class="cta-text">Let's Talk</span>
+              <div class="cta-btn-arrow">
+                <div class="svg-arrow-cta">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="cta-btn-fill-hover"></div>
+            </a>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1em;">
+          <div class="footer-brand">
+            YK<span class="dot">.</span>
+          </div>
+
+          <div class="footer-tagline">
+            Designed &amp; Built by YK. — Student, Designer &amp; Developer.
+          </div>
+
+          <div>
+            <a href="#hero" class="back-to-top-btn" id="back-to-top">
+              <span>BACK TO TOP</span>
+              <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 13V1M7 1L1 7M7 1L13 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Vite Entrypoint -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

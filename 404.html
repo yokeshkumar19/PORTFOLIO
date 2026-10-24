@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Lost in the Digital Void | YK.</title>
+  <meta name="description" content="404 Page Not Found — The coordinate you are trying to reach does not exist in this archive." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  
+  <!-- Preload Custom Fonts -->
+  <link rel="preload" href="/fonts/MDNichrome-Bold.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="/fonts/NeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="/fonts/NeueMontreal-Medium.otf" as="font" type="font/otf" crossorigin />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/404.css" />
+  <link rel="prefetch" href="/index.html" />
+  <link rel="prefetch" href="/about.html" />
+</head>
+<body class="page-404">
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+
+  <!-- Floating Navigation Bar -->
+  <header class="nav-header">
+    <div class="nav-header-left">
+      <a href="/index.html" class="nav-brand-wordmark">
+        YK<span class="dot">.</span>
+      </a>
+    </div>
+
+    <div class="nav-header-right">
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop-links" aria-label="Main Navigation">
+        <a href="/index.html#projects" class="nav-link-item">Works</a>
+        <a href="/about.html" class="nav-link-item">About</a>
+        <a href="/index.html#process" class="nav-link-item">Process</a>
+        <a href="javascript:void(0)" class="nav-link-item" data-contact-trigger>Contact</a>
+      </nav>
+
+      <!-- Theme Switcher (Two26 Linen / Dark Mode) -->
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light / Dark Mode" title="Toggle Theme">
+        <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <a href="javascript:void(0)" class="cta-btn nav-cta-btn" data-contact-trigger role="button" aria-label="Open Contact Modal">
+        <span class="cta-text">Get in Touch</span>
+        <div class="cta-btn-arrow">
+          <div class="svg-arrow-cta">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="cta-btn-fill-hover"></div>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="yk-nav-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Navigation Drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Drawer Menu -->
+  <div class="ham-navbar" id="ham-menu">
+    <div class="ham-navbar-header">
+      <div class="nav-brand-wordmark">
+        YK<span class="dot">.</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.8em;">
+        <button class="theme-toggle-btn" id="ham-theme-toggle" aria-label="Toggle Light / Dark Mode" title="Toggle Theme">
+          <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="close-btn" id="ham-close-btn" aria-label="Close Menu">
+          <span>Close</span>
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 1L13 13M1 13L13 1"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="ham-navbar-content">
+      <nav class="ham-nav-links">
+        <a href="/index.html#projects" class="ham-nav-item">
+          <span class="nav-index">01</span>Works
+        </a>
+        <a href="/about.html" class="ham-nav-item">
+          <span class="nav-index">02</span>About
+        </a>
+        <a href="/index.html#process" class="ham-nav-item">
+          <span class="nav-index">03</span>Process
+        </a>
+        <a href="javascript:void(0)" class="ham-nav-item" data-contact-trigger>
+          <span class="nav-index">04</span>Contact
+        </a>
+      </nav>
+
+      <div class="ham-cta" style="margin: 1.5em 0 1em;">
+        <a href="javascript:void(0)" class="cta-btn nav-cta-btn" data-contact-trigger role="button" aria-label="Open Contact Modal">
+          <span class="cta-text">Get in Touch</span>
+          <div class="cta-btn-arrow">
+            <div class="svg-arrow-cta">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cta-btn-fill-hover"></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="ham-navbar-footer">
+      <span>© 2026 YK. ALL RIGHTS RESERVED.</span>
+      <span>DESIGNER / DEVELOPER / STUDENT</span>
+    </div>
+  </div>
+
+  <!-- Two26 Studio Fullscreen Contact Modal -->
+  <div class="contact-page" id="contact-modal" data-contact-page aria-modal="true" role="dialog">
+    <div class="contact-transition" aria-hidden="true">
+      <div class="svg-tcontact">
+        <svg width="100%" height="100%" viewBox="0 0 998 901" fill="none" preserveAspectRatio="none">
+          <path id="contact-transition-path" d="M372.5 886C372.5 886 879.181 886 855 766.5C801.982 504.5 19.5 1042.52 19.5 646.5C19.5 316.5 952.535 583.56 978 318.5C1000 89.5 193.6 431.263 111 221C34.6544 26.6589 565 19 565 19" stroke="#FF5400" stroke-width="0" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="contact-navbar">
+      <div class="navbar-logo-contact">
+        <span class="contact-logo-wordmark">YK<span class="dot">.</span></span>
+      </div>
+      <div class="close-btn-wrapper">
+        <button class="close-btn contact-close-btn" id="contact-close-btn" aria-label="Close Contact View">
+          <div class="back-arrow">
+            <svg width="10" height="10" viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M6.86328 0.5L0.499281 6.864M6.86328 6.864L0.499281 0.5"/>
+            </svg>
+          </div>
+          <span class="back-btn-txt">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="contact-content">
+      <div class="contact-left">
+        <h2 class="contact-heading">WANT TO</h2>
+        <h2 class="contact-heading">START</h2>
+        <h2 class="contact-heading right">A NEW</h2>
+        <h2 class="contact-heading left">PROJECT?</h2>
+        <p class="contact-para left">or just say hello!</p>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-email-wrap">
+          <div class="email-heading">Direct Inquiries &amp; Projects</div>
+          <a href="mailto:yokeshkumar192007@gmail.com?subject=Project%20Inquiry" class="email-link">yokeshkumar192007@gmail.com</a>
+        </div>
+
+        <div class="contact-email-wrap">
+          <div class="email-heading">Campus &amp; Collaboration</div>
+          <a href="mailto:yokeshkumar.250408@aids.ritchennai.edu.in?subject=Collaboration" class="email-link">yokeshkumar.250408@aids.ritchennai.edu.in</a>
+        </div>
+
+        <div class="contact-social-row">
+          <a href="https://github.com/yokeshkumar19" target="_blank" rel="noopener noreferrer" class="contact-social">
+            <span class="contact-social-link">GitHub ↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/yokesh-kumar-9597b0394/" target="_blank" rel="noopener noreferrer" class="contact-social">
+            <span class="contact-social-link">LinkedIn ↗</span>
+          </a>
+          <a href="mailto:yokeshkumar192007@gmail.com" class="contact-social">
+            <span class="contact-social-link">Email ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-img-wrap" aria-hidden="true">
+      <img src="/assets/contact-art.svg" loading="lazy" alt="Contact Illustration" class="contact-img" />
+    </div>
+  </div>
+
+  <!-- Toast Notification Pill -->
+  <div class="toast-notice" id="toast-notice"></div>
+
+  <!-- ==================== MAIN 404 CONTENT ==================== -->
+  <main class="section-404">
+    <!-- Corner Crosshairs -->
+    <div class="error-crosshair error-crosshair-tl" aria-hidden="true">+</div>
+    <div class="error-crosshair error-crosshair-tr" aria-hidden="true">+</div>
+    <div class="error-crosshair error-crosshair-bl" aria-hidden="true">+</div>
+    <div class="error-crosshair error-crosshair-br" aria-hidden="true">+</div>
+
+    <!-- Editorial Telemetry Badge -->
+    <div class="error-telemetry-badge">
+      <span class="error-beacon-dot"></span>
+      <span>COORD: 0x404 // ROUTE_UNMAPPED</span>
+    </div>
+
+    <!-- Giant Kinetic 404 Digits Stage -->
+    <div class="error-digits-stage" title="Interactive: Move mouse or tap digits!">
+      <!-- Overlapping Floating Pills -->
+      <div class="error-floating-pill pill-top-right">
+        <span>ERROR 404</span>
+      </div>
+      <div class="error-floating-pill pill-bottom-left">
+        <span>DETOUR DETECTED</span>
+      </div>
+
+      <!-- Curving S-Path Vector -->
+      <div class="error-hero-path" aria-hidden="true">
+        <svg viewBox="0 0 998 901" fill="none" preserveAspectRatio="none">
+          <path d="M120 780 C320 850, 780 720, 850 520 C920 320, 480 340, 240 460 C60 560, 160 220, 450 160 C720 100, 880 180, 920 120" stroke="var(--orange)" stroke-width="20" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- Giant Numbers -->
+      <div class="error-digits" aria-label="Error 404">
+        <span class="error-digit" role="img" aria-label="Digit 4">4</span>
+        <span class="error-digit is-orange" role="img" aria-label="Digit 0">0</span>
+        <span class="error-digit" role="img" aria-label="Digit 4">4</span>
+      </div>
+    </div>
+
+    <!-- Masked Line-by-Line Headings -->
+    <div class="error-heading-group">
+      <h1 class="error-heading" data-404-heading>Lost in the</h1>
+      <h1 class="error-heading is-orange" data-404-heading>digital void.</h1>
+    </div>
+
+    <!-- Descriptive Bio Copy -->
+    <p class="error-description">
+      The link you followed has drifted off course, dissolved into the ether, or was never cataloged. Fear not — every path connects back to the portfolio core.
+    </p>
+
+    <!-- Magnetic CTA Buttons -->
+    <div class="error-actions">
+      <a href="/index.html" class="cta-btn" role="button" aria-label="Return to Home">
+        <span class="cta-text">Return to Home</span>
+        <div class="cta-btn-arrow">
+          <div class="svg-arrow-cta">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="cta-btn-fill-hover"></div>
+      </a>
+
+      <a href="/index.html#projects" class="cta-btn is-secondary" role="button" aria-label="Explore Selected Works">
+        <span class="cta-text">Explore Selected Works</span>
+        <div class="cta-btn-arrow">
+          <div class="svg-arrow-cta">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="cta-btn-fill-hover"></div>
+      </a>
+
+      <a href="javascript:void(0)" class="cta-btn is-secondary" data-contact-trigger role="button" aria-label="Report Broken Link">
+        <span class="cta-text">Say Hello</span>
+        <div class="cta-btn-arrow">
+          <div class="svg-arrow-cta">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M1.46439 8.53621L8.53546 1.46515M3.05538 1.28837L8.53546 1.46515L8.71223 6.94522" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="cta-btn-fill-hover"></div>
+      </a>
+    </div>
+
+    <!-- Quick Waypoints Grid -->
+    <div class="error-waypoints">
+      <div class="error-waypoints-label">OR QUICK JUMP TO ARCHIVES:</div>
+      <div class="error-waypoints-grid">
+        <a href="/index.html#projects" class="error-waypoint-card">
+          <div class="error-waypoint-num">01 // PROJECTS</div>
+          <div class="error-waypoint-title">
+            <span>Selected Works</span>
+            <span class="arrow">↗</span>
+          </div>
+        </a>
+
+        <a href="/about.html" class="error-waypoint-card">
+          <div class="error-waypoint-num">02 // PROFILE</div>
+          <div class="error-waypoint-title">
+            <span>About YK.</span>
+            <span class="arrow">↗</span>
+          </div>
+        </a>
+
+        <a href="/index.html#process" class="error-waypoint-card">
+          <div class="error-waypoint-num">03 // CRAFT</div>
+          <div class="error-waypoint-title">
+            <span>Design Process</span>
+            <span class="arrow">↗</span>
+          </div>
+        </a>
+
+        <a href="javascript:void(0)" class="error-waypoint-card" data-contact-trigger>
+          <div class="error-waypoint-num">04 // INQUIRY</div>
+          <div class="error-waypoint-title">
+            <span>Start a Project</span>
+            <span class="arrow">↗</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimalist 404 Footer -->
+  <footer class="error-footer">
+    <div>© 2026 YK. ALL RIGHTS RESERVED.</div>
+    <div>PORTFOLIO CORE // TWO26 KINETIC AESTHETICS</div>
+    <div>
+      <a href="/index.html">RETURN HOME ↗</a>
+    </div>
+  </footer>
+
+  <!-- Vite Entrypoint for 404 Page -->
+  <script type="module" src="/src/404.js"></script>
+</body>
+</html>

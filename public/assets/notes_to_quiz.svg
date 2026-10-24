@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <rect width="1200" height="800" fill="#110E1A"/>
+
+  <rect x="50" y="40" width="1100" height="70" rx="16" fill="#181424" stroke="#2D2545" stroke-width="1.5"/>
+  <text x="85" y="82" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="22" font-weight="700">Notes-to-Quiz <tspan fill="#A78BFA">AI</tspan></text>
+  
+  <rect x="310" y="60" width="160" height="30" rx="15" fill="#241E36" stroke="#3A2F57" stroke-width="1"/>
+  <circle cx="326" cy="75" r="4" fill="#A78BFA"/>
+  <text x="338" y="80" fill="#DDD6FE" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="500">In Active Development</text>
+
+  <rect x="990" y="58" width="130" height="34" rx="17" fill="#8B5CF6" fill-opacity="0.2" stroke="#8B5CF6" stroke-width="1"/>
+  <text x="1055" y="80" fill="#C4B5FD" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="600" text-anchor="middle">IN PROGRESS</text>
+
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="460" height="600" rx="20" fill="#1B1728" stroke="#2D2545" stroke-width="1.5"/>
+    <text x="35" y="45" fill="#A78BFA" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="600" letter-spacing="1">SYLLABUS &amp; NOTES PARSER</text>
+    <text x="35" y="85" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="24" font-weight="700">Operating Systems &amp; Concurrency</text>
+    
+    <rect x="35" y="115" width="390" height="120" rx="12" fill="#120E1E" stroke="#8B5CF6" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <text x="230" y="165" fill="#C4B5FD" font-family="'Neue Montreal', sans-serif" font-size="14" font-weight="600" text-anchor="middle">Lecture_04_Process_Scheduling.pdf</text>
+    <text x="230" y="190" fill="#7C6F9B" font-family="'Neue Montreal', sans-serif" font-size="12" text-anchor="middle">48 Pages • Extracted 14 Key Concepts</text>
+
+    <text x="35" y="275" fill="#A78BFA" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="600" letter-spacing="1">EXTRACTED TOPIC COVERAGE</text>
+    
+    <g transform="translate(35, 295)">
+      <rect x="0" y="0" width="390" height="48" rx="10" fill="#161224" stroke="#2D2545" stroke-width="1"/>
+      <text x="20" y="29" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="13" font-weight="500">Round Robin &amp; Priority Scheduling</text>
+      <text x="340" y="29" fill="#10B981" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="700">92%</text>
+
+      <rect x="0" y="58" width="390" height="48" rx="10" fill="#161224" stroke="#2D2545" stroke-width="1"/>
+      <text x="20" y="87" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="13" font-weight="500">Deadlocks &amp; Banker's Algorithm</text>
+      <text x="340" y="87" fill="#10B981" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="700">88%</text>
+
+      <rect x="0" y="116" width="390" height="48" rx="10" fill="#161224" stroke="#2D2545" stroke-width="1"/>
+      <text x="20" y="145" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="13" font-weight="500">Semaphores &amp; Critical Sections</text>
+      <text x="340" y="145" fill="#F59E0B" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="700">76%</text>
+
+      <rect x="0" y="174" width="390" height="48" rx="10" fill="#161224" stroke="#2D2545" stroke-width="1"/>
+      <text x="20" y="203" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="13" font-weight="500">Virtual Memory &amp; Page Faults</text>
+      <text x="340" y="203" fill="#10B981" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="700">95%</text>
+    </g>
+  </g>
+
+  <g transform="translate(540, 140)">
+    <rect x="0" y="0" width="610" height="600" rx="20" fill="#1B1728" stroke="#2D2545" stroke-width="1.5"/>
+    <text x="40" y="45" fill="#A78BFA" font-family="'Neue Montreal', sans-serif" font-size="12" font-weight="600" letter-spacing="1">GENERATED PRACTICE QUESTION</text>
+    <text x="40" y="85" fill="#F5F3ED" font-family="'MD Nichrome', sans-serif" font-size="22" font-weight="700">Question 3 of 10 • Conceptual Reasoning</text>
+
+    <rect x="40" y="115" width="530" height="90" rx="14" fill="#120E1E" stroke="#3A2F57" stroke-width="1"/>
+    <text x="60" y="150" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="15" font-weight="500">
+      "Which condition is NOT strictly required for a deadlock to occur
+    </text>
+    <text x="60" y="175" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="15" font-weight="500">
+      under the Coffman conditions?"
+    </text>
+
+    <g transform="translate(40, 230)">
+      <rect x="0" y="0" width="530" height="56" rx="12" fill="#161224" stroke="#2D2545" stroke-width="1.5"/>
+      <circle cx="28" cy="28" r="10" fill="#241E36"/>
+      <text x="28" y="32" fill="#C4B5FD" font-family="'Neue Montreal', sans-serif" font-size="11" font-weight="700" text-anchor="middle">A</text>
+      <text x="56" y="33" fill="#E2E8F0" font-family="'Neue Montreal', sans-serif" font-size="14">Mutual Exclusion</text>
+
+      <rect x="0" y="70" width="530" height="56" rx="12" fill="#161224" stroke="#2D2545" stroke-width="1.5"/>
+      <circle cx="28" cy="28" r="10" fill="#241E36"/>
+      <text x="28" y="32" fill="#C4B5FD" font-family="'Neue Montreal', sans-serif" font-size="11" font-weight="700" text-anchor="middle">B</text>
+      <text x="56" y="33" fill="#E2E8F0" font-family="'Neue Montreal', sans-serif" font-size="14">Hold and Wait</text>
+
+      <rect x="0" y="140" width="530" height="56" rx="12" fill="#10B981" fill-opacity="0.12" stroke="#10B981" stroke-width="1.5"/>
+      <circle cx="28" cy="28" r="10" fill="#10B981"/>
+      <text x="28" y="32" fill="#FFF" font-family="'Neue Montreal', sans-serif" font-size="11" font-weight="700" text-anchor="middle">C</text>
+      <text x="56" y="33" fill="#F5F3ED" font-family="'Neue Montreal', sans-serif" font-size="14" font-weight="600">Preemptive Resource Allocation (Correct)</text>
+
+      <rect x="0" y="210" width="530" height="56" rx="12" fill="#161224" stroke="#2D2545" stroke-width="1.5"/>
+      <circle cx="28" cy="28" r="10" fill="#241E36"/>
+      <text x="28" y="32" fill="#C4B5FD" font-family="'Neue Montreal', sans-serif" font-size="11" font-weight="700" text-anchor="middle">D</text>
+      <text x="56" y="33" fill="#E2E8F0" font-family="'Neue Montreal', sans-serif" font-size="14">Circular Wait</text>
+    </g>
+
+    <rect x="40" y="520" width="530" height="50" rx="10" fill="#8B5CF6" fill-opacity="0.1" stroke="#8B5CF6" stroke-width="1"/>
+    <text x="60" y="550" fill="#DDD6FE" font-family="'Neue Montreal', sans-serif" font-size="12">
+      AI Explanation: Deadlock requires NO preemption. Allowing preemption breaks deadlocks.
+    </text>
+  </g>
+</svg>
